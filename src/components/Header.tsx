@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import { IoClose } from "react-icons/io5";
 import { RiMenu5Fill } from "react-icons/ri";
 import { FiTwitter, FiLinkedin, FiGithub } from "react-icons/fi";
@@ -11,40 +12,29 @@ const Header = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <header className="flex justify-between items-center px-[1rem] py-[2rem]">
-      <div className="w-[30px] h-[30px]">
+    <header className="">
+      <div className="header__logo">
         <img src={logo} alt="Eri Schön's Logo" />
       </div>
-
-      <nav className="flex">
-        <ul className="justify-start items-center gap-2.5 hidden md:flex">
+      <nav className="navbar">
+        <ul className="navbar__links">
           {menuLink.map((item) => (
-            <li key={`link-${item}`} className="list-none">
-              <a
-                href={`#${item}`}
-                className="uppercase text-sm font-semibold hover:text-[#ffc107]"
-              >
-                {item}
-              </a>
+            <li key={`link-${item}`} className="navbar__link">
+              <a href={`#${item}`}>{item}</a>
             </li>
           ))}
         </ul>
 
-        <div className="w-[35px] h-[35px] relative flex justify-center items-center md:hidden">
+        <div className="navbar__menu">
           <RiMenu5Fill onClick={() => setToggle(true)} />
 
           {toggle && (
-            <div className="fixed top-0 bottom-0 right-0 z-50 w-1/2 h-vh flex justify-end items-end flex-col bg-[#2f4365]">
+            <div className="menu__container">
               <IoClose onClick={() => setToggle(false)} />
-
-              <ul className="m-0 mt-[3rem] p-0 h-[100%] w-[100%] flex justify-start items-start flex-col">
+              <ul>
                 {menuLink.map((item) => (
-                  <li key={item} className="m-[1rem]">
-                    <a
-                      href={`#${item}`}
-                      onClick={() => setToggle(false)}
-                      className="hover:text-[#ffc107] decoration-none text-[1rem] uppercase font-semibold ease-in-out"
-                    >
+                  <li key={item}>
+                    <a href={`#${item}`} onClick={() => setToggle(false)}>
                       {item}
                     </a>
                   </li>
@@ -55,7 +45,7 @@ const Header = () => {
         </div>
       </nav>
 
-      <div className="social__container hidden">
+      <div className="social__container">
         <a
           href="https://twitter.com/erischon"
           className="home__social--link"

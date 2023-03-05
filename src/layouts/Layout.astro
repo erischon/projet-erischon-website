@@ -1,5 +1,5 @@
 ---
-import "../styles/global.css";
+import "../styles/global.scss";
 ---
 
 <html lang="en">
@@ -14,3 +14,8 @@ import "../styles/global.css";
     <slot />
   </body>
 </html>
+
+<style lang="scss" is:global>
+  @import "../styles/global.scss";
+  // @import "../styles/variables.scss";
+</style>

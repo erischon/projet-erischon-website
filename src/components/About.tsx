@@ -1,8 +1,4 @@
-import Image from "next/legacy/image";
-import React from "react";
-import { urlFor } from "../lib/sanity";
-
-import me from "../public/images/avatar_erischon.png";
+import me from "../assets/avatar_erischon.png";
 
 const About = () => {
   return (
@@ -56,13 +52,7 @@ const About = () => {
 
         <div className="container__right">
           <div className="img__me">
-            <Image
-              src={me}
-              alt="Eri Schön"
-              width={270}
-              height={270}
-              layout="intrinsic"
-            />
+            <img src={me} alt="Eri Schön" width={270} height={270} />
           </div>
         </div>
       </div>
