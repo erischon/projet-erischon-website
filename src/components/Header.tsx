@@ -1,10 +1,11 @@
 import { useState } from "react";
 
-import { IoClose } from "react-icons/io5";
-import { RiMenu5Fill } from "react-icons/ri";
-import { FiTwitter, FiLinkedin, FiGithub } from "react-icons/fi";
-
 import logo from "../assets/logo-fff-es.png";
+import burger from "../assets/icons/burger.svg";
+import close from "../assets/icons/close.svg";
+import twitter from "../assets/icons/twitter.svg";
+import linkedin from "../assets/icons/linkedin.svg";
+import github from "../assets/icons/github.svg";
 
 const Header = () => {
   const menuLink = ["About", "Services", "Experience", "Projets"];
@@ -26,11 +27,11 @@ const Header = () => {
         </ul>
 
         <div className="navbar__menu">
-          <RiMenu5Fill onClick={() => setToggle(true)} />
+          <img src={burger} onClick={() => setToggle(true)} />
 
           {toggle && (
             <div className="menu__container">
-              <IoClose onClick={() => setToggle(false)} />
+              <img src={close} onClick={() => setToggle(false)} />
               <ul>
                 {menuLink.map((item) => (
                   <li key={item}>
@@ -52,7 +53,7 @@ const Header = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FiTwitter />
+          <img src={twitter} />
         </a>
         <a
           href="https://www.linkedin.com/in/ericschonhofen/"
@@ -60,7 +61,7 @@ const Header = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FiLinkedin />
+          <img src={linkedin} />
         </a>
         <a
           href="https://github.com/erischon"
@@ -68,7 +69,7 @@ const Header = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FiGithub />
+          <img src={github} />
         </a>
       </div>
     </header>
