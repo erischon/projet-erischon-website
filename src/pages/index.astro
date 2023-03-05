@@ -1,15 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import About from "../components/About";
 import Services from "../components/Services.astro";
 ---
 
 <Layout title="Eri Schön Website">
-  <Header client:load />
-  <Hero client:load />
-  <About client:load />
   <Services />
 </Layout>
