@@ -1,16 +1,23 @@
 ---
-import "../styles/global.css";
+import Projets from "../components/Projets.astro";
+import Layout from "../layouts/Layout.astro";
+
+const styles = {
+  importantString: "underline text-slate-500 capitalize",
+};
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-
-    <title>Eri Schön Website</title>
-  </head>
-  <body>
-    <h1>Eri Schön Website</h1>
-  </body>
-</html>
+<Layout>
+  <h1 class="text-3xl mx-auto text-center">
+    Développeur Frontend spécialisé dans la confection d'application web
+    <span class={styles.importantString}>fluides</span>, <span
+      class={styles.importantString}>rapides</span
+    > et <span class={styles.importantString}>fiables</span>
+  </h1>
+  <p>
+    Hi, I'm Eri. I'm a software engineer and a designer. I'm currently working
+    at <a href="https://www.uber.com">Uber</a> as a Senior Software Engineer. I'm
+    also a co-founder of <a href="https://www.ubereats.com">Uber Eats</a>.
+  </p>
+  <Projets />
+</Layout>
