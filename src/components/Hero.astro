@@ -1,0 +1,54 @@
+---
+---
+
+<section class="hero">
+  <h1 class="">
+    Développeur Frontend spécialisé dans la confection de site et d'application
+    web
+    <span class="fluide">fluides</span>, <span class="rapide">rapides</span> et <span
+      class="fiable">fiables</span
+    >.
+  </h1>
+</section>
+
+<style lang="scss">
+  @import "../styles/_variables.scss";
+
+  .hero {
+    display: flex;
+
+    margin: 0 auto;
+    width: 70%;
+
+    text-align: center;
+
+    animation: fadeInAnimation ease 5s;
+
+    h1 {
+      span {
+        display: inline-block;
+        color: $clr-secondary;
+
+        &.fluide {
+          animation: skewText ease 15s;
+          transform: skew(-13deg);
+        }
+        &.rapide {
+          animation: skewText ease 20s;
+          transform: skew(-13deg);
+        }
+        &.fiable {
+          animation: skewText ease 25s;
+          transform: skew(-13deg);
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      text-align: start;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+</style>

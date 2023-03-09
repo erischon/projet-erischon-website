@@ -1,19 +1,11 @@
 ---
+import Hero from "../components/Hero.astro";
 import Projets from "../components/Projets.astro";
 import Layout from "../layouts/Layout.astro";
-
-const styles = {
-  importantString: " text-slate-500",
-};
 ---
 
 <Layout>
-  <h1 class="text-3xl mx-auto text-left font-extrabold w-2/3 font-title">
-    Développeur Frontend spécialisé dans la confection d'application web
-    <span class={styles.importantString}>fluides</span>, <span
-      class={styles.importantString}>rapides</span
-    > et <span class={styles.importantString}>fiables</span>.
-  </h1>
+  <Hero />
   <p>
     Hi, I'm Eri. I'm a software engineer and a designer. I'm currently working
     at <a href="https://www.uber.com">Uber</a> as a Senior Software Engineer. I'm

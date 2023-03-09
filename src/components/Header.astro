@@ -2,20 +2,60 @@
 import logo from "../assets/favicon-32x32.png";
 ---
 
-<header class="mx-4 my-2">
-  <div class="container flex justify-between items-center">
-    <div class="flex justify-between items-center">
+<header class="">
+  <div class="container">
+    <div class="logo">
       <a href="/">
-        <img src={logo} alt="Eri Schön" class="w-5" />
+        <img src={logo} alt="Eri Schön" />
       </a>
-      <span class="font-semibold ml-2">Eri Schön</span>
+      <span class="">Eri Schön</span>
     </div>
 
     <nav>
-      <ul class="flex items-center gap-4">
+      <ul class="">
         <li><a href="/about">About</a></li>
         <li><a href="/blog">Blog</a></li>
       </ul>
     </nav>
   </div>
 </header>
+
+<style lang="scss">
+  header {
+    margin: 1rem 2rem;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+          display: flex;
+        }
+
+        img {
+          width: 1.5rem;
+        }
+
+        span {
+          margin-left: 0.75rem;
+
+          font-size: 1rem;
+          font-weight: 600;
+        }
+      }
+
+      nav {
+        ul {
+          display: flex;
+          gap: 1rem;
+        }
+      }
+    }
+  }
+</style>
