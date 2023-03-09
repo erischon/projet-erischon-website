@@ -22,9 +22,11 @@ $ff-secondary: "Source Sans Pro", sans-serif;
 
 @keyframes skewText {
   0% {
+    opacity: 0.5;
     transform: skewX(0deg);
   }
   100% {
+    opacity: 1;
     transform: skewX(-10deg);
   }
 }
