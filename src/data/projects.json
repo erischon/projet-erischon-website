@@ -1,0 +1,31 @@
+[
+    {
+        "title": "Argent Bank",
+        "description": "Système d'authentification pour une application bancaire.",
+        "type": "",
+        "liveUrl": "https://github.com/erischon/argentbank-frontend",
+        "codeUrl": "https://github.com/erischon/argentbank-frontend",
+        "featured": "true",
+        "lastUpdated": "2023-02-08",
+        "image": "",
+        "tags": [
+            "React.js",
+            "Redux-Toolkit",
+            "React-Router"           
+        ]
+    },
+    {
+        "title": "Kasa",
+        "description": "Passage à une stack Javascript d'une application de location d'appartements.",
+        "type": "",
+        "liveUrl": "https://kasa-erischon.netlify.app/",
+        "codeUrl": "https://github.com/erischon/kasa-frontend",
+        "featured": "true",
+        "lastUpdated": "2023-02-01",
+        "image": "",
+        "tags": [
+            "React",
+            "React-Router"      
+        ]
+    }
+]
