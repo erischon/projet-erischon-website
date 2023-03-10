@@ -40,3 +40,9 @@ h1 {
   line-height: 1.2;
   color: $clr-text;
 }
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}

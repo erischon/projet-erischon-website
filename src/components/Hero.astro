@@ -2,13 +2,16 @@
 ---
 
 <section class="hero">
-  <h1 class="">
-    Développeur Frontend spécialisé dans la confection de site et d'application
-    web
-    <span class="fluide">fluides</span>, <span class="rapide">rapides</span> et <span
-      class="fiable">fiables</span
-    >.
+  <p class="intro">Bonjour, je suis <strong>Eri Schön</strong>.</p>
+  <h1 class="title">
+    Je vous <span>confectionne</span> des applications web sur mesure.
   </h1>
+  <p class="subtitle">
+    Je suis développeur Back-of-the-Front-end Freelance spécialisé dans la
+    confection d'application web <span>fluides</span>, <span>rapides</span> et <span
+      >fiables</span
+    >.
+  </p>
 </section>
 
 <style lang="scss">
@@ -16,40 +19,39 @@
 
   .hero {
     display: flex;
+    flex-direction: column;
 
     margin: 0 auto;
-    width: 70%;
+    width: 75%;
 
-    text-align: center;
+    text-align: left;
 
-    animation: fadeInAnimation ease 3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    p {
+      font-size: 0.9rem;
 
-    h1 {
-      span {
-        display: inline-block;
-        color: $clr-secondary;
-
-        &.fluide {
-          animation: skewText ease 9s;
-          animation-fill-mode: forwards;
-        }
-        &.rapide {
-          animation: skewText ease 12s;
-          animation-fill-mode: forwards;
-        }
-        &.fiable {
-          animation: skewText ease 15s;
-          animation-fill-mode: forwards;
-        }
+      &.intro {
+        font-style: italic;
       }
     }
 
+    h1 {
+      margin: 0.5rem 0;
+
+      font-size: 2rem;
+
+      animation: fadeInAnimation ease 3s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    span {
+      font-weight: 700;
+      color: $clr-secondary;
+    }
     @media screen and (min-width: 768px) {
       text-align: start;
       h1 {
-        font-size: 2rem;
+        font-size: 2.25rem;
       }
     }
   }
