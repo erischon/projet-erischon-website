@@ -12,6 +12,7 @@
       >fiables</span
     >.
   </p>
+  <button> Contactez-moi !</button>
 </section>
 
 <style lang="scss">
@@ -47,6 +48,24 @@
     span {
       font-weight: 700;
       color: $clr-secondary;
+    }
+
+    button {
+      margin: 1.5rem 0;
+      padding: 1rem 2rem;
+
+      width: 12rem;
+      border: $clr-secondary 1px solid;
+      background-color: transparent;
+
+      font-weight: 700;
+      color: $clr-secondary;
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: $clr-background-light;
+      }
     }
     @media screen and (min-width: 768px) {
       text-align: start;
