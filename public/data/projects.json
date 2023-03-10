@@ -5,9 +5,10 @@
         "type": "",
         "liveUrl": "https://github.com/erischon/argentbank-frontend",
         "codeUrl": "https://github.com/erischon/argentbank-frontend",
+        "caseStudyUrl": "",
         "featured": "true",
         "lastUpdated": "2023-02-08",
-        "image": "",
+        "image": "https://res.cloudinary.com/dxyabkggp/image/upload/v1678469442/erischon-website/projects/argentbank-800x419-1_fnutmz.png",
         "tags": [
             "React.js",
             "Redux-Toolkit",
@@ -20,9 +21,10 @@
         "type": "",
         "liveUrl": "https://kasa-erischon.netlify.app/",
         "codeUrl": "https://github.com/erischon/kasa-frontend",
+        "caseStudyUrl": "",
         "featured": "true",
         "lastUpdated": "2023-02-01",
-        "image": "",
+        "image": "https://res.cloudinary.com/dxyabkggp/image/upload/v1678470465/erischon-website/projects/kasa-800x419-1_p1gj1o.png",
         "tags": [
             "React",
             "React-Router"      

@@ -1,12 +1,15 @@
 ---
-const response = await fetch("../data/projects.json");
+import Project from "./Project.astro";
+
+const response = await fetch("http://localhost:3000/data/projects.json");
 const data = await response.json();
 
 console.log(data);
 ---
 
 <section class="projects">
-  <h1 class="">Mes Projets</h1>
+  <h2 class="">Mes Projets</h2>
+  {data.map((project) => <Project project={project} />)}
 </section>
 
 <style lang="scss">
@@ -19,6 +22,6 @@ console.log(data);
     margin: 1rem 0;
     width: 100%;
 
-    background-color: aquamarine;
+    // background-color: aquamarine;
   }
 </style>
