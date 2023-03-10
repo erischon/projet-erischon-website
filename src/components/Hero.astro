@@ -22,7 +22,9 @@
 
     text-align: center;
 
-    animation: fadeInAnimation ease 5s;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 
     h1 {
       span {
@@ -30,16 +32,16 @@
         color: $clr-secondary;
 
         &.fluide {
-          animation: skewText ease 15s;
-          transform: skew(-13deg);
+          animation: skewText ease 9s;
+          animation-fill-mode: forwards;
         }
         &.rapide {
-          animation: skewText ease 20s;
-          transform: skew(-13deg);
+          animation: skewText ease 12s;
+          animation-fill-mode: forwards;
         }
         &.fiable {
-          animation: skewText ease 25s;
-          transform: skew(-13deg);
+          animation: skewText ease 15s;
+          animation-fill-mode: forwards;
         }
       }
     }
