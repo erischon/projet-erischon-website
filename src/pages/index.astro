@@ -1,16 +1,12 @@
 ---
-import "../styles/global.css";
+import Hero from "../components/Hero.astro";
+import Projets from "../components/Projets.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
+<Layout>
+  <Hero />
+  <Projets />
+</Layout>
 
-    <title>Eri Schön Website</title>
-  </head>
-  <body>
-    <h1>Eri Schön Website</h1>
-  </body>
-</html>
+<style lang="scss"></style>

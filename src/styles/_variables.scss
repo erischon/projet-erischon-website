@@ -1,0 +1,32 @@
+$clr-white: #e6f1ff;
+$clr-secondary: #ffc107;
+$clr-text: #ccd6f6;
+$clr-text-light: #a8b2d1;
+$clr-background: #0a192f;
+$clr-background-light: #2f4365;
+
+$ff-primary: "Source Code Pro", monospace;
+$ff-secondary: "Source Sans Pro", sans-serif;
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes skewText {
+  0% {
+    opacity: 0.5;
+    transform: skewX(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: skewX(-10deg);
+  }
+}
