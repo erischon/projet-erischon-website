@@ -29,5 +29,22 @@
             "React",
             "React-Router"      
         ]
+    },
+    {
+        "title": "Fisheye",
+        "description": "Site web qui permet à des photographes indépendants de présenter leurs meilleurs travaux.",
+        "type": "",
+        "liveUrl": "https://erischon.github.io/Fisheye-frontend/index.html",
+        "codeUrl": "https://github.com/erischon/Fisheye-frontend",
+        "caseStudyUrl": "",
+        "featured": "true",
+        "lastUpdated": "2022-07-09",
+        "image": "https://res.cloudinary.com/dxyabkggp/image/upload/v1678527263/erischon-website/projects/fisheye-800x419-1_afwi1t.png",
+        "tags": [
+            "HTML",
+            "SaSS",
+            "Javascript"      
+        ]
     }
+
 ]
