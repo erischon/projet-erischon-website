@@ -1,0 +1,45 @@
+const projects = [
+  {
+    title: "Argent Bank",
+    description: "Système d'authentification pour une application bancaire.",
+    type: "",
+    liveUrl: "https://github.com/erischon/argentbank-frontend",
+    codeUrl: "https://github.com/erischon/argentbank-frontend",
+    caseStudyUrl: "/projects/argentbank",
+    featured: "true",
+    lastUpdated: "2023-02-08",
+    image:
+      "https://res.cloudinary.com/dxyabkggp/image/upload/v1678469442/erischon-website/projects/argentbank-800x419-1_fnutmz.png",
+    tags: ["React.js", "Redux-Toolkit", "React-Router"],
+  },
+  {
+    title: "Kasa",
+    description:
+      "Passage à une stack Javascript d'une application de location d'appartements.",
+    type: "",
+    liveUrl: "https://kasa-erischon.netlify.app/",
+    codeUrl: "https://github.com/erischon/kasa-frontend",
+    caseStudyUrl: "/projects/kasa",
+    featured: "true",
+    lastUpdated: "2023-02-01",
+    image:
+      "https://res.cloudinary.com/dxyabkggp/image/upload/v1678470465/erischon-website/projects/kasa-800x419-1_p1gj1o.png",
+    tags: ["React", "React-Router"],
+  },
+  {
+    title: "Fisheye",
+    description:
+      "Site web qui permet à des photographes indépendants de présenter leurs meilleurs travaux.",
+    type: "",
+    liveUrl: "https://erischon.github.io/Fisheye-frontend/index.html",
+    codeUrl: "https://github.com/erischon/Fisheye-frontend",
+    caseStudyUrl: "/projects/fisheye",
+    featured: "true",
+    lastUpdated: "2022-07-09",
+    image:
+      "https://res.cloudinary.com/dxyabkggp/image/upload/v1678527263/erischon-website/projects/fisheye-800x419-1_afwi1t.png",
+    tags: ["HTML", "SaSS", "Javascript"],
+  },
+];
+
+export default projects;
