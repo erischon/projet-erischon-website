@@ -3,8 +3,6 @@ import Project from "./Project.astro";
 
 const response = await fetch("http://localhost:3000/data/projects.json");
 const data = await response.json();
-
-console.log(data);
 ---
 
 <section class="projects">
@@ -44,8 +42,8 @@ console.log(data);
         bottom: 45%;
         margin-left: 1rem;
         content: "";
-        width: 100%;
-        height: 0.1rem;
+        width: 50%;
+        height: 0.2rem;
         background-color: $clr-background-light;
       }
     }
