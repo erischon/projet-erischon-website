@@ -8,6 +8,11 @@ $clr-background-light: #2f4365;
 $ff-primary: "Source Code Pro", monospace;
 $ff-secondary: "Source Sans Pro", sans-serif;
 
+@mixin shadow {
+  -webkit-box-shadow: 0 2px 8px hsla(0, 0%, 50%, 0.7);
+  box-shadow: 0 2px 8px hsla(0, 0%, 50%, 0.7);
+}
+
 @keyframes fadeInAnimation {
   0% {
     opacity: 0;

@@ -1,0 +1,57 @@
+---
+import Project from "./Project.astro";
+
+const response = await fetch("http://localhost:3000/data/projects.json");
+const data = await response.json();
+---
+
+<section class="projects">
+  <h2 class="">Mes Projets</h2>
+
+  <div class="projects-grid">
+    {data.map((project) => <Project project={project} />)}
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+  .projects {
+    margin: 1rem 0;
+    width: 100%;
+
+    &-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    h2 {
+      position: relative;
+
+      margin: 1rem 0;
+
+      &:before {
+        content: "+";
+        margin-right: 0.5rem;
+        color: $clr-secondary;
+      }
+
+      &:after {
+        position: absolute;
+        bottom: 45%;
+        margin-left: 1rem;
+        content: "";
+        width: 50%;
+        height: 0.2rem;
+        background-color: $clr-background-light;
+      }
+    }
+
+    @media screen and (min-width: 640px) {
+      &-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+</style>
