@@ -6,23 +6,121 @@ const { frontmatter } = Astro.props;
 
 <Layout>
   <img src={frontmatter.image.url} alt={frontmatter.title} />
-  <h1>{frontmatter.title}</h1>
+  <section class="container">
+    <div class="description">
+      <h1>{frontmatter.title}</h1>
+      <p>Rôle: {frontmatter.role}</p>
+      <p>Dernière mise à jour : {frontmatter.lastUpdated}</p>
+    </div>
 
-  <slot />
+    <div class="infos">
+      <div class="links">
+        <a href={frontmatter.liveUrl} target="_blank">Live</a>
+        <a href={frontmatter.codeUrl} target="_blank">Code</a>
+      </div>
+
+      <div class="tags">
+        {
+          frontmatter.tags.map((tag: string) => {
+            return <span class="tag">{tag}</span>;
+          })
+        }
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <slot />
+  </main>
+
+  <style lang="scss">
+    @import "../styles/variables.scss";
+
+    img {
+      margin-bottom: 1rem;
+
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 0.5rem;
+
+      @include shadow;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      margin-bottom: 2rem;
+
+      @media screen and (min-width: 640px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .infos {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+
+        // width: 50%;
+
+        @media screen and (min-width: 640px) {
+          width: 40%;
+        }
+
+        .links {
+          display: flex;
+          justify-content: start;
+          gap: 1rem;
+
+          // width: 100%;
+
+          a {
+            display: inline-block;
+
+            padding: 0.5rem 1.5rem;
+            border: 2px solid $clr-secondary;
+            border-radius: 0.5rem;
+
+            font-size: 1rem;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            &:hover {
+              background-color: $clr-secondary;
+              color: $clr-background-light;
+            }
+          }
+        }
+
+        .tags {
+          display: flex;
+          justify-content: start;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+          margin-top: 1.5rem;
+
+          .tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border: 2px solid $clr-background-light;
+            background-color: $clr-background-light;
+            border-radius: 0.5rem;
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  </style>
 </Layout>
-
-<style lang="scss">
-  @import "../styles/variables.scss";
-
-  body {
-    background-color: white;
-  }
-  img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    object-position: top;
-
-    @include shadow;
-  }
-</style>
