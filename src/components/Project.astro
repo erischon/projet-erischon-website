@@ -3,49 +3,37 @@ import arrow from "../assets/icons/arrow.svg";
 const { project } = Astro.props;
 ---
 
-<article class="project">
-  <div class="image-container">
+<article class="card-project image-container">
+  <a href={project.caseStudyUrl}>
     {project.image && <img src={project.image} alt={project.title} />}
 
     <div class="overlay">
-      <div class="text">
-        <h3>
-          {project.title}
-        </h3>
+      <div class="description">
+        <h3>{project.title}</h3>
         <p>{project.description}</p>
       </div>
     </div>
-  </div>
+  </a>
 </article>
 
 <style lang="scss">
   @import "src/styles/variables.scss";
 
-  .project {
-    .image-container {
+  .card-project {
+    &.image-container {
       position: relative;
-      // width: 100%;
-      max-width: 420px;
-      // height: 100%;
-
-      border-radius: 0.5rem;
-      overflow: hidden;
+      width: 100%;
 
       object-fit: center;
-
       cursor: pointer;
 
       @include shadow;
-
-      @media screen and (min-width: 768px) {
-        max-width: 320px;
-      }
 
       img {
         display: block;
 
         width: 100%;
-        // max-width: 320px;
+        border-radius: 0.5rem;
 
         object-fit: cover;
         object-position: center;
@@ -54,60 +42,45 @@ const { project } = Astro.props;
       &:hover {
         .overlay {
           opacity: 0.9;
-        }
-
-        img {
-          transform: scale(1.05);
-          overflow: hidden;
+          height: 50%;
         }
       }
     }
 
     .overlay {
       position: absolute;
-      top: 0;
+      top: 200;
       bottom: 0;
       left: 0;
       right: 0;
-      height: 100%;
+
       width: 100%;
-      opacity: 0;
-      transition: 0.5s ease;
+      height: 0;
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
       background-color: $clr-background-light;
-    }
 
-    // .image-container:hover .overlay {
-    //   opacity: 0.9;
-    // }
-
-    .text {
-      color: $clr-white;
-
-      font-size: 20px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
+      overflow: hidden;
+      transition: 0.5s ease;
     }
 
     .description {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
+      padding: 1rem;
+      color: $clr-white;
 
-      a {
-        margin: 0.5rem 0;
+      p {
+        margin-top: 0.5rem;
+      }
+
+      @media screen and (min-width: 640px) {
+        h3 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.75rem;
+        }
       }
     }
-
-    // @media screen and (min-width: 768px) {
-    //   flex-direction: row;
-
-    //   .img-container {
-    //     max-width: 336px;
-    //     border-radius: 0.5rem;
-    //   }
-    // }
   }
 </style>

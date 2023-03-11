@@ -19,25 +19,13 @@ console.log(data);
   @import "../styles/variables.scss";
 
   .projects {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: start;
-
     margin: 1rem 0;
     width: 100%;
 
     &-grid {
-      display: flex;
-      // flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
-      gap: 2rem;
-
-      // width: fit-content;
-      // margin: 0 auto;
-      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
 
     h2 {
@@ -62,10 +50,10 @@ console.log(data);
       }
     }
 
-    // @media screen and (min-width: 640px) {
-    //   &-grid {
-    //     justify-content: space-around;
-    //   }
-    // }
+    @media screen and (min-width: 640px) {
+      &-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
   }
 </style>
