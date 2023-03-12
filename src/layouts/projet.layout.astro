@@ -1,6 +1,9 @@
 ---
 import Layout from "./Layout.astro";
 
+import iconGit from "../assets/icons/iconGit.png";
+import iconLink from "../assets/icons/iconLink.png";
+
 const { frontmatter } = Astro.props;
 ---
 
@@ -10,13 +13,17 @@ const { frontmatter } = Astro.props;
     <div class="description">
       <h1>{frontmatter.title}</h1>
       <p>Rôle: {frontmatter.role}</p>
-      <p>Dernière mise à jour : {frontmatter.lastUpdated}</p>
+      <p>Mis à jour le : {frontmatter.lastUpdated}</p>
     </div>
 
     <div class="infos">
       <div class="links">
-        <a href={frontmatter.liveUrl} target="_blank">Live</a>
-        <a href={frontmatter.codeUrl} target="_blank">Code</a>
+        <a href={frontmatter.liveUrl} target="_blank">
+          <img src={iconGit} alt="Live" />
+        </a>
+        <a href={frontmatter.codeUrl} target="_blank">
+          <img src={iconLink} alt="Code" />
+        </a>
       </div>
 
       <div class="tags">
@@ -43,14 +50,13 @@ const { frontmatter } = Astro.props;
       height: 200px;
       object-fit: cover;
       object-position: top;
-      border-radius: 0.5rem;
 
       @include shadow;
     }
 
     .container {
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       gap: 1rem;
 
       margin-bottom: 2rem;
@@ -65,59 +71,61 @@ const { frontmatter } = Astro.props;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+
+        width: 50%;
       }
 
       .infos {
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: end;
         justify-content: start;
 
-        // width: 50%;
+        width: 50%;
 
         @media screen and (min-width: 640px) {
+          align-items: start;
           width: 40%;
         }
 
         .links {
           display: flex;
           justify-content: start;
-          gap: 1rem;
+          gap: 1.5rem;
 
-          // width: 100%;
-
-          a {
-            display: inline-block;
-
-            padding: 0.5rem 1.5rem;
-            border: 2px solid $clr-secondary;
+          img {
+            margin: auto;
+            padding: 0.25rem;
+            width: 2rem;
+            height: 2rem;
             border-radius: 0.5rem;
+            background-color: $clr-secondary;
 
-            font-size: 1rem;
-            text-transform: uppercase;
-            cursor: pointer;
+            @include shadow;
 
             &:hover {
-              background-color: $clr-secondary;
-              color: $clr-background-light;
+              background-color: $clr-text-light;
             }
           }
         }
 
         .tags {
           display: flex;
-          justify-content: start;
+          justify-content: end;
           flex-wrap: wrap;
           gap: 0.5rem;
-          margin-top: 1.5rem;
+          margin-top: 1rem;
+
+          @media screen and (min-width: 640px) {
+            justify-content: start;
+          }
 
           .tag {
             display: inline-block;
             padding: 0.25rem 0.5rem;
             border: 2px solid $clr-background-light;
             background-color: $clr-background-light;
-            border-radius: 0.5rem;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
           }
         }
       }

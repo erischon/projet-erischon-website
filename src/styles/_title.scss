@@ -1,0 +1,21 @@
+.title {
+  position: relative;
+
+  margin: 1rem 0;
+
+  &:before {
+    content: "+";
+    margin-right: 0.5rem;
+    color: $clr-secondary;
+  }
+
+  &:after {
+    position: absolute;
+    bottom: 45%;
+    margin-left: 1rem;
+    content: "";
+    width: 120px;
+    height: 0.1rem;
+    background-color: $clr-secondary;
+  }
+}

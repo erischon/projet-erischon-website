@@ -1,0 +1,25 @@
+.btn {
+  display: block;
+
+  margin: 1.5rem 0;
+  padding: 1rem 2rem;
+  width: fit-content;
+
+  border: $clr-secondary 2px solid;
+  border-radius: 0.5rem;
+  background-color: $clr-secondary;
+
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: small;
+  font-weight: 700;
+  color: $clr-background;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $clr-background-light;
+    color: $clr-secondary;
+  }
+}

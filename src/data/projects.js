@@ -29,7 +29,7 @@ const projects = [
   {
     title: "Fisheye",
     description:
-      "Site web qui permet à des photographes indépendants de présenter leurs meilleurs travaux.",
+      "Site web permettant à des photographes indépendants de présenter leurs meilleurs travaux.",
     type: "",
     liveUrl: "https://erischon.github.io/Fisheye-frontend/index.html",
     codeUrl: "https://github.com/erischon/Fisheye-frontend",
