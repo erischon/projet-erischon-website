@@ -1,9 +1,10 @@
 ---
+import Button from "./Button";
 ---
 
 <section class="hero">
   <p class="intro">Bonjour, je suis <strong>Eri Schön</strong>.</p>
-  <h1 class="title">
+  <h1 class="">
     Je <span>confectionne</span> des applications web sur mesure.
   </h1>
   <p class="subtitle">
@@ -12,7 +13,8 @@
       >fiables</span
     >.
   </p>
-  <button> Contactez-moi !</button>
+
+  <Button link="/">Parlons-nous !</Button>
 </section>
 
 <style lang="scss">
@@ -46,24 +48,6 @@
     span {
       font-weight: 700;
       color: $clr-secondary;
-    }
-
-    button {
-      margin: 1.5rem 0;
-      padding: 1rem 2rem;
-
-      width: 12rem;
-      border: $clr-secondary 1px solid;
-      background-color: transparent;
-
-      font-weight: 700;
-      color: $clr-secondary;
-
-      cursor: pointer;
-
-      &:hover {
-        background-color: $clr-background-light;
-      }
     }
 
     @media screen and (min-width: 768px) {

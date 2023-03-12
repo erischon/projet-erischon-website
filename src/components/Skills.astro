@@ -1,0 +1,45 @@
+---
+import skills from "../data/skills";
+
+const { webApp, webSite, other } = skills[0];
+console.log(webApp);
+---
+
+<section class="skills">
+  <h2 class="title">Stacks que j'utilise</h2>
+  <article>
+    <p>...</p>
+    <div class="container">
+      {
+        webApp.map((skill) => {
+          return (
+            <a href="">
+              <img src={`/images/icons/${skill.icon}.svg`} alt={skill.name} />
+            </a>
+          );
+        })
+      }
+    </div>
+  </article>
+</section>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+  img {
+    width: 3rem;
+    height: 3rem;
+
+    // filter: grayscale(100%);
+    color: $clr-text-light;
+  }
+
+  .container {
+    display: flex;
+    gap: 1rem;
+
+    padding: 1rem;
+
+    background-color: $clr-background-light;
+  }
+</style>
