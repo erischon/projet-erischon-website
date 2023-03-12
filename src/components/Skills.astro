@@ -1,20 +1,54 @@
 ---
 import skills from "../data/skills";
 
-const { webApp, webSite, other } = skills[0];
+const { webApp, fullstack, other } = skills[0];
 console.log(webApp);
 ---
 
 <section class="skills">
-  <h2 class="title">Stacks que j'utilise</h2>
-  <article>
-    <p>...</p>
-    <div class="container">
+  <h2 class="title">Mes Stacks</h2>
+  <article class="container">
+    <p>Les outils que j'utilise pour la confection d'application Web.</p>
+    <div class="skill-list">
       {
         webApp.map((skill) => {
           return (
-            <a href="">
-              <img src={`/images/icons/${skill.icon}.svg`} alt={skill.name} />
+            <a href={skill.link} target="_blank">
+              <img
+                src={`/images/logos/${skill.icon}.svg`}
+                alt={skill.name}
+                class="icon"
+              />
+            </a>
+          );
+        })
+      }
+    </div>
+  </article>
+
+  <article class="container">
+    <p>Les outils que j'utilise pour la confection d'application Web.</p>
+    <div class="skill-list">
+      {
+        fullstack.map((skill) => {
+          return (
+            <a href={skill.link} target="_blank">
+              <img src={`/images/logos/${skill.icon}.svg`} alt={skill.name} />
+            </a>
+          );
+        })
+      }
+    </div>
+  </article>
+
+  <article class="container">
+    <p>Les outils que j'utilise pour la confection d'application Web.</p>
+    <div class="skill-list">
+      {
+        other.map((skill) => {
+          return (
+            <a href={skill.link} target="_blank">
+              <img src={`/images/logos/${skill.icon}.svg`} alt={skill.name} />
             </a>
           );
         })
@@ -26,20 +60,39 @@ console.log(webApp);
 <style lang="scss">
   @import "../styles/variables.scss";
 
+  article {
+    margin: 2rem 0;
+  }
+
   img {
     width: 3rem;
     height: 3rem;
 
     // filter: grayscale(100%);
-    color: $clr-text-light;
   }
 
   .container {
-    display: flex;
+    display: block;
+    flex-direction: column;
     gap: 1rem;
 
-    padding: 1rem;
+    padding: 1.5rem;
 
     background-color: $clr-background-light;
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-list {
+      display: flex;
+      //   justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+
+      a {
+        color: #ccd6f6;
+      }
+    }
   }
 </style>
