@@ -31,7 +31,11 @@ const skills = [
         link: "https://reactjs.org/",
         icon: "react",
       },
-
+      {
+        name: "redux",
+        link: "https://redux.js.org/",
+        icon: "redux",
+      },
       {
         name: "Astro js",
         link: "https://astro.build/",
