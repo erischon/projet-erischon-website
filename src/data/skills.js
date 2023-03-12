@@ -31,7 +31,11 @@ const skills = [
         link: "https://reactjs.org/",
         icon: "react",
       },
-
+      {
+        name: "redux",
+        link: "https://redux.js.org/",
+        icon: "redux",
+      },
       {
         name: "Astro js",
         link: "https://astro.build/",
@@ -54,11 +58,11 @@ const skills = [
         link: "https://trpc.io/",
         icon: "trpc",
       },
-      {
-        name: "GraphQL",
-        link: "https://graphql.org/",
-        icon: "graphql",
-      },
+      // {
+      //   name: "GraphQL",
+      //   link: "https://graphql.org/",
+      //   icon: "graphql",
+      // },
       {
         name: "Prisma",
         link: "https://www.prisma.io/",
@@ -69,22 +73,21 @@ const skills = [
         link: "https://www.postgresql.org/",
         icon: "postgresql",
       },
-
-      {
-        name: "Node.js",
-        link: "https://nodejs.org/en/",
-        icon: "nodejs",
-      },
-      {
-        name: "Express",
-        link: "https://expressjs.com/",
-        icon: "express",
-      },
-      {
-        name: "Nest.js",
-        link: "https://nestjs.com/",
-        icon: "nestjs",
-      },
+      // {
+      //   name: "Node.js",
+      //   link: "https://nodejs.org/en/",
+      //   icon: "nodejs",
+      // },
+      // {
+      //   name: "Express",
+      //   link: "https://expressjs.com/",
+      //   icon: "express",
+      // },
+      // {
+      //   name: "Nest.js",
+      //   link: "https://nestjs.com/",
+      //   icon: "nestjs",
+      // },
       {
         name: "MongoDB",
         link: "https://www.mongodb.com/",
@@ -99,8 +102,43 @@ const skills = [
       },
       {
         name: "GitHub",
-        link: "",
+        link: "https://github.com/",
         icon: "github",
+      },
+      {
+        name: "VS Code",
+        link: "https://code.visualstudio.com/",
+        icon: "vscode",
+      },
+      {
+        name: "Docker",
+        link: "https://www.docker.com/",
+        icon: "docker",
+      },
+      {
+        name: "Figma",
+        link: "https://www.figma.com/",
+        icon: "figma",
+      },
+      {
+        name: "Vercel",
+        link: "https://vercel.com/",
+        icon: "vercel",
+      },
+      {
+        name: "Netlify",
+        link: "https://www.netlify.com/",
+        icon: "netlify",
+      },
+      {
+        name: "Heroku",
+        link: "https://www.heroku.com/",
+        icon: "heroku",
+      },
+      {
+        name: "DigitalOcean",
+        link: "https://www.digitalocean.com/",
+        icon: "digitalocean",
       },
     ],
   },
