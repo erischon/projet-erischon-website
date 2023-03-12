@@ -98,8 +98,43 @@ const skills = [
       },
       {
         name: "GitHub",
-        link: "",
+        link: "https://github.com/",
         icon: "github",
+      },
+      {
+        name: "VS Code",
+        link: "https://code.visualstudio.com/",
+        icon: "vscode",
+      },
+      {
+        name: "Docker",
+        link: "https://www.docker.com/",
+        icon: "docker",
+      },
+      {
+        name: "Figma",
+        link: "https://www.figma.com/",
+        icon: "figma",
+      },
+      {
+        name: "Vercel",
+        link: "https://vercel.com/",
+        icon: "vercel",
+      },
+      {
+        name: "Netlify",
+        link: "https://www.netlify.com/",
+        icon: "netlify",
+      },
+      {
+        name: "Heroku",
+        link: "https://www.heroku.com/",
+        icon: "heroku",
+      },
+      {
+        name: "DigitalOcean",
+        link: "https://www.digitalocean.com/",
+        icon: "digitalocean",
       },
     ],
   },
