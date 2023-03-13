@@ -7,9 +7,11 @@ liveUrl: "https://kasa-erischon.netlify.app/"
 codeUrl: "https://github.com/erischon/kasa-frontend"
 role: 'Développeur React'
 image:
-    url: 'https://res.cloudinary.com/dxyabkggp/image/upload/v1678470465/erischon-website/projects/kasa-800x419-1_p1gj1o.png' 
+    url: 'kasa-cover' 
     alt: 'Kasa'
 tags: ["React.js", "React-Router"]
 ---
 
 ## L'étude de cas
+  <br/>
+coming soon...
