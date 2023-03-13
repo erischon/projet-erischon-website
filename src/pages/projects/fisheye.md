@@ -7,7 +7,7 @@ liveUrl: "https://erischon.github.io/Fisheye-frontend/index.html"
 codeUrl: "https://github.com/erischon/Fisheye-frontend"
 role: 'Développeur Front-end Javascript'
 image:
-    url: "https://res.cloudinary.com/dxyabkggp/image/upload/v1678527263/erischon-website/projects/fisheye-800x419-1_afwi1t.png" 
+    url: "fisheye-cover" 
     alt: 'Fisheye'
 tags: ["HTML", "SaSS", "Javascript"]
 ---

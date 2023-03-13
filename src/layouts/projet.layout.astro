@@ -1,38 +1,43 @@
 ---
+import { Image } from "astro:assets";
+
 import Layout from "./Layout.astro";
 
 import iconGit from "../assets/icons/iconGit.png";
 import iconLink from "../assets/icons/iconLink.png";
 
 const { frontmatter } = Astro.props;
+
+const coverImage = await import(
+  `../assets/projects/${frontmatter.image.url}.webp`
+);
 ---
 
 <Layout>
-  <img src={frontmatter.image.url} alt={frontmatter.title} />
   <section class="container">
+    <Image src={coverImage.default} alt={frontmatter.title} />
+
     <div class="description">
       <h1>{frontmatter.title}</h1>
       <p>Rôle: {frontmatter.role}</p>
       <p>Mis à jour le : {frontmatter.lastUpdated}</p>
     </div>
 
-    <div class="infos">
-      <div class="links">
-        <a href={frontmatter.liveUrl} target="_blank">
-          <img src={iconGit} alt="Live" />
-        </a>
-        <a href={frontmatter.codeUrl} target="_blank">
-          <img src={iconLink} alt="Code" />
-        </a>
-      </div>
+    <div class="links">
+      <a href={frontmatter.liveUrl} target="_blank">
+        <img src={iconGit.src} alt="Live" />
+      </a>
+      <a href={frontmatter.codeUrl} target="_blank">
+        <img src={iconLink.src} alt="Code" />
+      </a>
+    </div>
 
-      <div class="tags">
-        {
-          frontmatter.tags.map((tag: string) => {
-            return <span class="tag">{tag}</span>;
-          })
-        }
-      </div>
+    <div class="tags">
+      {
+        frontmatter.tags.map((tag: string) => {
+          return <span class="tag">{tag}</span>;
+        })
+      }
     </div>
   </section>
 
@@ -44,10 +49,12 @@ const { frontmatter } = Astro.props;
     @import "../styles/variables.scss";
 
     img {
-      margin-bottom: 1rem;
+      grid-area: cover-image;
 
+      margin-bottom: 1rem;
       width: 100%;
       height: 200px;
+
       object-fit: cover;
       object-position: top;
 
@@ -56,79 +63,119 @@ const { frontmatter } = Astro.props;
 
     .container {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
+      align-items: center;
       gap: 1rem;
 
+      // width: 100%;
       margin-bottom: 2rem;
 
       @media screen and (min-width: 640px) {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas:
+          "cover-image cover-image description"
+          "cover-image cover-image links"
+          "tags tags tags";
+        gap: 1rem;
+
+        // flex-direction: row;
+        // align-items: flex-start;
+        // flex-wrap: wrap;
+
+        img {
+          // width: 60%;
+        }
       }
 
       .description {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 0.5rem;
 
-        width: 50%;
-      }
+        grid-area: description;
 
-      .infos {
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        justify-content: start;
-
-        width: 50%;
+        margin-bottom: 1rem;
 
         @media screen and (min-width: 640px) {
-          align-items: start;
-          width: 40%;
-        }
+          align-items: flex-start;
 
-        .links {
-          display: flex;
-          justify-content: start;
-          gap: 1.5rem;
-
-          img {
-            margin: auto;
-            padding: 0.25rem;
-            width: 2rem;
-            height: 2rem;
-            border-radius: 0.5rem;
-            background-color: $clr-secondary;
-
-            @include shadow;
-
-            &:hover {
-              background-color: $clr-text-light;
-            }
-          }
-        }
-
-        .tags {
-          display: flex;
-          justify-content: end;
-          flex-wrap: wrap;
-          gap: 0.5rem;
-          margin-top: 1rem;
-
-          @media screen and (min-width: 640px) {
-            justify-content: start;
-          }
-
-          .tag {
-            display: inline-block;
-            padding: 0.25rem 0.5rem;
-            border: 2px solid $clr-background-light;
-            background-color: $clr-background-light;
-            font-size: 0.75rem;
-          }
+          margin-bottom: 0;
         }
       }
+
+      // .infos {
+      //   display: flex;
+      //   flex-direction: column;
+      //   align-items: center;
+
+      // @media screen and (min-width: 640px) {
+      //   flex-direction: row-reverse;
+      //   justify-content: space-between;
+      //   align-items: flex-start;
+
+      //   width: 100%;
+      // }
+
+      .links {
+        display: flex;
+        justify-content: start;
+        gap: 1.5rem;
+
+        grid-area: links;
+
+        img {
+          margin: auto;
+          padding: 0.25rem;
+          width: 2rem;
+          height: 2rem;
+          border-radius: 0.5rem;
+          background-color: $clr-secondary;
+
+          @include shadow;
+
+          &:hover {
+            background-color: $clr-text-light;
+          }
+        }
+
+        @media screen and (min-width: 640px) {
+          justify-content: flex-start;
+          align-items: center;
+
+          // width: 35%;
+          height: 3.5rem;
+        }
+      }
+
+      .tags {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        grid-area: tags;
+
+        margin-top: 1rem;
+
+        @media screen and (min-width: 640px) {
+          justify-content: flex-start;
+          align-items: center;
+          gap: 1rem;
+
+          margin-top: 0;
+        }
+
+        .tag {
+          display: inline-block;
+          padding: 0.25rem 0.5rem;
+          border: 2px solid $clr-background-light;
+          background-color: $clr-background-light;
+          font-size: 0.75rem;
+        }
+      }
+      // }
     }
   </style>
 </Layout>

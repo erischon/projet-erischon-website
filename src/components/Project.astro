@@ -1,11 +1,23 @@
 ---
-import arrow from "../assets/icons/arrow.svg";
+import { Image } from "astro:assets";
+
 const { project } = Astro.props;
+
+const coverImage = await import(`../assets/projects/${project.image}.webp`);
 ---
 
 <article class="card-project image-container">
   <a href={project.caseStudyUrl}>
-    {project.image && <img src={project.image} alt={project.title} />}
+    {
+      project.image && (
+        <Image
+          src={coverImage.default}
+          alt={project.title}
+          width={400}
+          quality={100}
+        />
+      )
+    }
 
     <div class="overlay">
       <div class="description">
@@ -36,7 +48,7 @@ const { project } = Astro.props;
         border-radius: 0.5rem;
 
         object-fit: cover;
-        object-position: center;
+        object-position: top 0 left 0;
       }
 
       &:hover {
