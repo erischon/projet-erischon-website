@@ -67,7 +67,6 @@ const coverImage = await import(
       align-items: center;
       gap: 1rem;
 
-      // width: 100%;
       margin-bottom: 2rem;
 
       @media screen and (min-width: 640px) {
@@ -75,18 +74,10 @@ const coverImage = await import(
         grid-template-columns: 1fr 1fr 1fr;
         grid-auto-rows: auto;
         grid-template-areas:
-          "cover-image cover-image description"
-          "cover-image cover-image links"
+          "description cover-image cover-image"
+          "links cover-image cover-image"
           "tags tags tags";
         gap: 1rem;
-
-        // flex-direction: row;
-        // align-items: flex-start;
-        // flex-wrap: wrap;
-
-        img {
-          // width: 60%;
-        }
       }
 
       .description {
@@ -105,19 +96,6 @@ const coverImage = await import(
           margin-bottom: 0;
         }
       }
-
-      // .infos {
-      //   display: flex;
-      //   flex-direction: column;
-      //   align-items: center;
-
-      // @media screen and (min-width: 640px) {
-      //   flex-direction: row-reverse;
-      //   justify-content: space-between;
-      //   align-items: flex-start;
-
-      //   width: 100%;
-      // }
 
       .links {
         display: flex;
@@ -145,7 +123,6 @@ const coverImage = await import(
           justify-content: flex-start;
           align-items: center;
 
-          // width: 35%;
           height: 3.5rem;
         }
       }
@@ -175,7 +152,6 @@ const coverImage = await import(
           font-size: 0.75rem;
         }
       }
-      // }
     }
   </style>
 </Layout>
