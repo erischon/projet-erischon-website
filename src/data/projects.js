@@ -8,8 +8,7 @@ const projects = [
     caseStudyUrl: "/projects/argentbank",
     featured: "true",
     lastUpdated: "2023-02-08",
-    image:
-      "https://res.cloudinary.com/dxyabkggp/image/upload/v1678469442/erischon-website/projects/argentbank-800x419-1_fnutmz.png",
+    image: "argentbank-cover",
     tags: ["React.js", "Redux-Toolkit", "React-Router"],
   },
   {
@@ -22,8 +21,7 @@ const projects = [
     caseStudyUrl: "/projects/kasa",
     featured: "true",
     lastUpdated: "2023-02-01",
-    image:
-      "https://res.cloudinary.com/dxyabkggp/image/upload/v1678470465/erischon-website/projects/kasa-800x419-1_p1gj1o.png",
+    image: "kasa-cover",
     tags: ["React", "React-Router"],
   },
   {
@@ -36,8 +34,7 @@ const projects = [
     caseStudyUrl: "/projects/fisheye",
     featured: "true",
     lastUpdated: "2022-07-09",
-    image:
-      "https://res.cloudinary.com/dxyabkggp/image/upload/v1678527263/erischon-website/projects/fisheye-800x419-1_afwi1t.png",
+    image: "fisheye-cover",
     tags: ["HTML", "SaSS", "Javascript"],
   },
 ];
