@@ -19,10 +19,10 @@ const period = getPeriod(startDate, endDate);
   <p class="description">{job.description}</p>
 
   <div class="technos">
-    <span class="technos-title">Technos :</span>
+    <span class="technos-title">Stack principal :</span>
 
     <div class="tags">
-      {job.tags.map((tag: string) => <span class="tag">{tag}</span>)}
+      {job.techs.map((tech: string) => <span class="tech">{tech}</span>)}
     </div>
   </div>
 
@@ -65,11 +65,13 @@ const period = getPeriod(startDate, endDate);
         margin-top: 1rem;
         font-size: smaller;
 
-        .tag {
+        .tech {
           display: inline-block;
           grid-area: tag;
 
           padding: 0 0.5rem;
+
+          text-transform: capitalize;
           font-size: medium;
           color: $clr-text;
         }
@@ -91,9 +93,11 @@ const period = getPeriod(startDate, endDate);
             display: none;
           }
 
-          .tag {
-            background-color: $clr-background-light;
+          .tech {
+            margin: 0 0.5rem;
             padding: 1rem;
+
+            background-color: $clr-background-light;
           }
         }
       }

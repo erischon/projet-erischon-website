@@ -6,7 +6,7 @@ const experience = [
     startDate: "2022-01-01",
     endDate: "",
     description: "Missions de Freelance en Full Remote.",
-    tags: ["Javascript", "React"],
+    techs: ["javascript", "react"],
   },
   {
     position: "Développeur Back-end",
@@ -15,7 +15,7 @@ const experience = [
     startDate: "2020-01-01",
     endDate: "2021-12-31",
     description: "Missions de Freelance en Full Remote.",
-    tags: ["Python", "Django"],
+    techs: ["python", "django"],
   },
 ];
 
