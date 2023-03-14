@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+
+const avatar = await import("../assets/avatar_erischon.png");
+---
+
+<section class="about">
+  <h2 class="title">About</h2>
+
+  <div class="about-grid">
+    <p>
+      Bonjour, je suis Eri, je suis tombé dans l’univers du Web en 1995 et
+      depuis je ne l’ai pas quitté.<br />
+      Aujourd’hui je suis développeur Back-of-the-Front-end Freelance en full remote.<br
+      />
+      J’ai une expertise en création, modification et entretien de site et d'application
+      Web.
+    </p>
+
+    <Image src={avatar.default} alt="Eri Schön" width={250} />
+  </div>
+</section>
+
+<style lang="scss">
+  .about {
+    margin: 3rem 0;
+
+    .about-grid {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      margin: 0 auto;
+
+      p {
+        // margin: 0;
+        line-height: 1.75;
+      }
+
+      img {
+        display: none;
+      }
+
+      @media screen and (min-width: 640px) {
+        grid-template-columns: 2fr 1fr;
+
+        p {
+          font-size: 1.1rem;
+        }
+
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+</style>
