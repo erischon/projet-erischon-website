@@ -1,0 +1,102 @@
+---
+import { getPeriod } from "../utils/getPeriod";
+
+const { job } = Astro.props;
+
+const startDate = job.startDate ? new Date(job.startDate) : null;
+const endDate = job.endDate ? new Date(job.endDate) : null;
+const period = getPeriod(startDate, endDate);
+---
+
+<article class="xp-card">
+  <p class="period">{period}</p>
+
+  <h3 class="job-title">
+    {job.position}
+    <span class="company">@ {job.company}</span>
+  </h3>
+
+  <p class="description">{job.description}</p>
+
+  <div class="technos">
+    <span class="technos-title">Technos :</span>
+
+    <div class="tags">
+      {job.tags.map((tag: string) => <span class="tag">{tag}</span>)}
+    </div>
+  </div>
+
+  <style lang="scss">
+    @import "../styles/variables.scss";
+
+    .xp-card {
+      display: flex;
+      flex-direction: column;
+
+      margin: 3rem 0;
+
+      .period {
+        grid-area: period;
+
+        font-size: smaller;
+      }
+
+      .job-title {
+        grid-area: title;
+        margin-bottom: 0.75rem;
+      }
+
+      .company {
+        grid-area: company;
+
+        color: $clr-secondary;
+      }
+
+      .description {
+        grid-area: description;
+      }
+
+      .technos {
+        display: flex;
+        align-items: center;
+
+        grid-area: technos;
+
+        margin-top: 1rem;
+        font-size: smaller;
+
+        .tag {
+          display: inline-block;
+          grid-area: tag;
+
+          padding: 0 0.5rem;
+          font-size: medium;
+          color: $clr-text;
+        }
+      }
+
+      @media screen and (min-width: 640px) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-auto-rows: auto;
+        grid-template-areas:
+          "period technos"
+          "title technos"
+          "description technos";
+
+        .technos {
+          flex-direction: column;
+
+          .technos-title {
+            display: none;
+          }
+
+          .tag {
+            background-color: $clr-background-light;
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  </style>
+</article>
