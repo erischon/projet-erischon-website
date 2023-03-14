@@ -21,7 +21,7 @@ const period = getPeriod(startDate, endDate);
   <div class="technos">
     <span class="technos-title">Stack principal :</span>
 
-    <div class="tags">
+    <div class="techs">
       {job.techs.map((tech: string) => <span class="tech">{tech}</span>)}
     </div>
   </div>
@@ -62,7 +62,6 @@ const period = getPeriod(startDate, endDate);
 
         grid-area: technos;
 
-        margin-top: 1rem;
         font-size: smaller;
 
         .tech {
@@ -87,17 +86,24 @@ const period = getPeriod(startDate, endDate);
           "description technos";
 
         .technos {
-          flex-direction: column;
-
           .technos-title {
             display: none;
           }
 
-          .tech {
-            margin: 0 0.5rem;
-            padding: 1rem;
+          .techs {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            gap: 0.25rem;
 
-            background-color: $clr-background-light;
+            width: 100%;
+
+            .tech {
+              padding: 0.25rem 0.75rem;
+
+              font-size: medium;
+              background-color: $clr-background-light;
+            }
           }
         }
       }

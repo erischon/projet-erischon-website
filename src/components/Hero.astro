@@ -4,9 +4,11 @@ import Button from "./Button";
 
 <section class="hero">
   <p class="intro">Bonjour, je suis <strong>Eri Schön</strong>.</p>
+
   <h1 class="">
     Je <span>confectionne</span> des applications web sur mesure.
   </h1>
+
   <p class="subtitle">
     Je suis développeur Back-of-the-Front-end Freelance spécialisé dans la
     confection d'application web <span>fluides</span>, <span>rapides</span> et <span
@@ -14,7 +16,9 @@ import Button from "./Button";
     >.
   </p>
 
-  <Button link="/">Parlons-nous !</Button>
+  <div class="button">
+    <Button link="mailto:erischon@gmail.com">Parlons-nous !</Button>
+  </div>
 </section>
 
 <style lang="scss">
@@ -52,8 +56,13 @@ import Button from "./Button";
 
     @media screen and (min-width: 768px) {
       text-align: start;
+
       h1 {
         font-size: 2.25rem;
+      }
+
+      .button {
+        margin-top: 2rem;
       }
     }
   }

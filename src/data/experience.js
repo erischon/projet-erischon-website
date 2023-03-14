@@ -5,7 +5,7 @@ const experience = [
     location: "Remote",
     startDate: "2022-01-01",
     endDate: "",
-    description: "Missions de Freelance en Full Remote.",
+    description: "Missions Freelance en Full Remote.",
     techs: ["javascript", "react"],
   },
   {
@@ -14,8 +14,8 @@ const experience = [
     location: "Remote",
     startDate: "2020-01-01",
     endDate: "2021-12-31",
-    description: "Missions de Freelance en Full Remote.",
-    techs: ["python", "django"],
+    description: "Missions Freelance en Full Remote.",
+    techs: ["python", "django", "postgresql"],
   },
 ];
 
