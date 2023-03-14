@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/projet.layout.astro"
+layout: "../../layouts/project.layout.astro"
 title: 'Fisheye'
 lastUpdated: "2022-07-09"
 description: "Site web qui permet à des photographes indépendants de présenter leurs meilleurs travaux."
