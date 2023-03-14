@@ -32,18 +32,20 @@ const period = getPeriod(startDate, endDate);
     .xp-card {
       display: flex;
       flex-direction: column;
+      gap: 0.5rem;
 
       margin: 3rem 0;
 
       .period {
         grid-area: period;
 
-        font-size: smaller;
+        font-size: 0.75rem;
+        // text-transform: uppercase;
+        font-style: italic;
       }
 
       .job-title {
         grid-area: title;
-        margin-bottom: 0.75rem;
       }
 
       .company {
@@ -71,7 +73,7 @@ const period = getPeriod(startDate, endDate);
           padding: 0 0.5rem;
 
           text-transform: capitalize;
-          font-size: medium;
+          font-size: small;
           color: $clr-text;
         }
       }
