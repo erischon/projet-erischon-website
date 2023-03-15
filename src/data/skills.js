@@ -111,6 +111,11 @@ const skills = [
         icon: "vscode",
       },
       {
+        name: "vite",
+        link: "https://vitejs.dev/",
+        icon: "vite",
+      },
+      {
         name: "Docker",
         link: "https://www.docker.com/",
         icon: "docker",

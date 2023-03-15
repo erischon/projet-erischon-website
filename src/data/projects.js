@@ -25,6 +25,18 @@ const projects = [
     tags: ["React", "React-Router"],
   },
   {
+    title: "Les Petits Plats",
+    description: "Moteur de recherche de recettes de cuisine.",
+    type: "",
+    liveUrl: "https://erischon-les-petits-plats.netlify.app/",
+    codeUrl: "https://github.com/erischon/erischon-les-petits-plats",
+    caseStudyUrl: "/projects/lesPetitsPlats",
+    featured: "true",
+    lastUpdated: "2023-03-15",
+    image: "les-petits-plats-cover",
+    tags: ["HTML", "SaSS", "Javascript"],
+  },
+  {
     title: "Fisheye",
     description:
       "Site web permettant à des photographes indépendants de présenter leurs meilleurs travaux.",
@@ -34,19 +46,6 @@ const projects = [
     caseStudyUrl: "/projects/fisheye",
     featured: "true",
     lastUpdated: "2022-07-09",
-    image: "fisheye-cover",
-    tags: ["HTML", "SaSS", "Javascript"],
-  },
-  {
-    title: "Les Petits Plats",
-    description:
-      "Site web permettant à des photographes indépendants de présenter leurs meilleurs travaux.",
-    type: "",
-    liveUrl: "https://erischon-les-petits-plats.netlify.app/",
-    codeUrl: "https://github.com/erischon/erischon-les-petits-plats",
-    caseStudyUrl: "/projects/lesPetitsPlats",
-    featured: "true",
-    lastUpdated: "2023-03-15",
     image: "fisheye-cover",
     tags: ["HTML", "SaSS", "Javascript"],
   },
