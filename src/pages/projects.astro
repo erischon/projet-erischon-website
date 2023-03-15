@@ -1,0 +1,54 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const allProjects = await Astro.glob("../pages/projects/*");
+const icon = await import("../assets/icons/project.svg");
+console.log(icon);
+---
+
+<Layout>
+  <section class="">
+    <h2 class="title">Les projets</h2>
+
+    {
+      allProjects.map((project) => (
+        <article>
+          <div>
+            <img src={`/images/icons/project.svg`} alt="" />
+            <a href={project.url}>{project.frontmatter.title}</a>
+          </div>
+          <span>{project.frontmatter.description}</span>
+        </article>
+      ))
+    }
+  </section>
+</Layout>
+
+<style lang="scss">
+  article {
+    margin: 2rem 0;
+
+    div {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    img {
+      margin-right: 0.5rem;
+
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+
+    a {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    span {
+      font-size: 0.9rem;
+    }
+  }
+</style>
