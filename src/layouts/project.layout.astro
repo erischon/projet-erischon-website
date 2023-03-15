@@ -11,12 +11,9 @@ const { frontmatter } = Astro.props;
 const coverImage = await import(
   `../assets/projects/${frontmatter.image.url}.webp`
 );
-
-const props = Astro.props;
-console.log("props", props);
 ---
 
-<Layout title={`Projet - ${props.content.title}`}>
+<Layout title={`Projet - ${frontmatter.title}`}>
   <section class="container">
     <Image src={coverImage.default} alt={frontmatter.title} />
 
