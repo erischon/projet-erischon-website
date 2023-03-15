@@ -2,7 +2,11 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 
+import seoData from "../data/seo";
+
 import "../styles/global.scss";
+
+const { title } = Astro.props;
 ---
 
 <html lang="en">
@@ -11,9 +15,24 @@ import "../styles/global.scss";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {/* SEO */}
+    <meta name="description" content={seoData.description} />
+    <meta name="image" content={seoData.image} />
 
-    <title>Eri Schön Website</title>
+    <meta property="og:title" content={seoData.title} />
+    <meta property="og:description" content={seoData.description} />
+    <meta property="og:image" content={seoData.image} />
+    <meta property="og:url" content={seoData.url} />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:creator" content={seoData.twitterUsername} />
+    <meta name="twitter:title" content={seoData.title} />
+    <meta name="twitter:description" content={seoData.description} />
+    <meta name="twitter:image" content={seoData.image} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+
+    <title>{title}</title>
   </head>
   <body>
     <Header />
