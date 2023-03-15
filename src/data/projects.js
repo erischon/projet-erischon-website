@@ -37,6 +37,19 @@ const projects = [
     image: "fisheye-cover",
     tags: ["HTML", "SaSS", "Javascript"],
   },
+  {
+    title: "Les Petits Plats",
+    description:
+      "Site web permettant à des photographes indépendants de présenter leurs meilleurs travaux.",
+    type: "",
+    liveUrl: "https://erischon-les-petits-plats.netlify.app/",
+    codeUrl: "https://github.com/erischon/erischon-les-petits-plats",
+    caseStudyUrl: "/projects/lesPetitsPlats",
+    featured: "true",
+    lastUpdated: "2023-03-15",
+    image: "fisheye-cover",
+    tags: ["HTML", "SaSS", "Javascript"],
+  },
 ];
 
 export default projects;
