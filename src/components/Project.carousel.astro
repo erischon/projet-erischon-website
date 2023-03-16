@@ -1,0 +1,17 @@
+---
+import Carousel from "./Carousel.jsx";
+
+import projects from "../data/projects";
+console.log("projects", projects);
+---
+
+<section>
+  <Carousel client:load>
+    {
+      projects &&
+        projects.map((project) => (
+          <img src={project.image} alt={project.title} />
+        ))
+    }
+  </Carousel>
+</section>
