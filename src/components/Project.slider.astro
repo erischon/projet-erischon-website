@@ -9,10 +9,12 @@ import data from "../data/projects";
     <div class="image-container" id="images">
       {
         data.map((project) => (
-          <img
-            src={`/images/projects/${project.image}.webp`}
-            alt={project.title}
-          />
+          <a href={project.caseStudyUrl}>
+            <img
+              src={`/images/projects/${project.image}.webp`}
+              alt={project.title}
+            />
+          </a>
         ))
       }
     </div>
@@ -31,28 +33,30 @@ import data from "../data/projects";
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+
+    margin: 4rem 0;
 
     .carousel {
       position: relative;
-
-      width: 500px;
-      // height: 530px;
       overflow: hidden;
+
+      width: 600px;
+      border-radius: 0.5rem;
     }
 
     .image-container {
       display: flex;
+      border-radius: 0.5rem;
+      cursor: pointer;
 
       transform: translateX(0);
       transition: transform 0.5s ease-in-out;
     }
 
     img {
-      width: 500px;
-      // height: 500px;
+      width: 600px;
       object-fit: cover;
+      border-radius: 0.5rem;
     }
 
     .buttons-container {
@@ -103,7 +107,7 @@ import data from "../data/projects";
 
   let idx = 0;
 
-  let interval = setInterval(run, 2000);
+  let interval = setInterval(run, 3000);
 
   function run() {
     idx++;
@@ -118,6 +122,25 @@ import data from "../data/projects";
       idx = image.length - 1;
     }
 
-    images.style.transform = `translateX(${-idx * 500}px)`;
+    images.style.transform = `translateX(${-idx * 600}px)`;
   }
+
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(run, 2000);
+  }
+
+  rightBtn.addEventListener("click", () => {
+    idx++;
+
+    changeImage();
+    resetInterval();
+  });
+
+  leftBtn.addEventListener("click", () => {
+    idx--;
+
+    changeImage();
+    resetInterval();
+  });
 </script>

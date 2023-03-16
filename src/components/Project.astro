@@ -1,14 +1,11 @@
 ---
-import Project from "./Project.card.astro";
-import data from "../data/projects";
+import Projectslider from "./Project.slider.astro";
 ---
 
 <section class="projects">
   <h2 class="title">Mes Projets</h2>
 
-  <div class="projects-grid">
-    {data.map((project) => <Project project={project} />)}
-  </div>
+  <Projectslider />
 </section>
 
 <style lang="scss">
