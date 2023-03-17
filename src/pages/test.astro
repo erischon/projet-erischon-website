@@ -1,5 +1,16 @@
 ---
-import Projectslider from "../components/Project.slider.astro";
+import ImageSlider from "../components/ImageSlider";
+import slides from "../data/projects";
 ---
 
-<Projectslider />
+<section class="slider-container">
+  <ImageSlider client:load slides={slides} />
+</section>
+
+<style lang="scss">
+  .slider-container {
+    width: 500px;
+    height: 250px;
+    margin: 0 auto;
+  }
+</style>

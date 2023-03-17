@@ -1,0 +1,17 @@
+.slider {
+  position: relative;
+
+  height: 100%;
+}
+
+.slide {
+}
+
+.leftArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 32px;
+  color: black;
+  background-color: white;
+}
