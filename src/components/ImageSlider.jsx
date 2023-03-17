@@ -35,13 +35,13 @@ function ImageSlider({ slides }) {
       <img src={chevronLeft.src} className="arrow left" onClick={previous} />
       <img src={chevronRight.src} className="arrow right" onClick={next} />
 
-      <div style={styles.slide} className="slide">
-        <a href={slides[currentIndex].caseStudyUrl}>
+      <a href={slides[currentIndex].caseStudyUrl}>
+        <div style={styles.slide} className="slide">
           <div className="slide__text">
             <h2>{slides[currentIndex].title}</h2>
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
     </div>
   );
 }
