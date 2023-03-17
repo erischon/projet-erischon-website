@@ -3,55 +3,45 @@ import { useState } from "react";
 import chevronRight from "../assets/icons/chevron-right.svg";
 import chevronLeft from "../assets/icons/chevron-left.svg";
 
+import "../styles/slider.scss";
+
 function ImageSlider({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const styles = {
-    slider: {
-      position: "relative",
-      height: "100%",
-    },
     slide: {
-      width: "100%",
-      height: "100%",
-      borderRadius: "10px",
-      backgroundPosition: "center",
-      backgroundSize: "cover",
       backgroundImage: `url(/images/projects/${slides[currentIndex].image}.webp)`,
-    },
-    leftArrow: {
-      position: "absolute",
-      top: "50%",
-      //   transform: "translateY(-50%)",
-      //   left: "32px",
-      color: "black",
-      with: "5rem",
-      height: "5rem",
-      backgroundColor: "white",
-      zIndex: "1",
-      cursor: "pointer",
-    },
-    rightArrow: {
-      position: "absolute",
-      top: "50%",
-      //   transform: "translateY(-50%)",
-      //   left: "32px",
-      color: "black",
-      with: "5rem",
-      height: "5rem",
-      backgroundColor: "white",
-      zIndex: "1",
-      cursor: "pointer",
     },
   };
 
+  const previous = () => {
+    if (currentIndex === 0) {
+      setCurrentIndex(slides.length - 1);
+    } else {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  const next = () => {
+    if (currentIndex === slides.length - 1) {
+      setCurrentIndex(0);
+    } else {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
   return (
-    <div style={styles.slider}>
-      <img src={chevronLeft.src} style={styles.leftArrow} />
+    <div className="slider">
+      <img src={chevronLeft.src} className="arrow left" onClick={previous} />
+      <img src={chevronRight.src} className="arrow right" onClick={next} />
 
-      <img src={chevronRight.src} style={styles.rightArrow} />
-
-      <div style={styles.slide}></div>
+      <a href={slides[currentIndex].caseStudyUrl}>
+        <div style={styles.slide} className="slide">
+          <div className="slide__text">
+            <h2>{slides[currentIndex].title}</h2>
+          </div>
+        </div>
+      </a>
     </div>
   );
 }

@@ -1,0 +1,146 @@
+---
+import { Icon } from "astro-icon";
+
+import data from "../data/projects";
+---
+
+<section>
+  <div class="carousel">
+    <div class="image-container" id="images">
+      {
+        data.map((project) => (
+          <a href={project.caseStudyUrl}>
+            <img
+              src={`/images/projects/${project.image}.webp`}
+              alt={project.title}
+            />
+          </a>
+        ))
+      }
+    </div>
+
+    <div class="buttons-container">
+      <button id="left"><Icon name="ic:round-chevron-left" /></button>
+      <button id="right"><Icon name="ic:round-chevron-right" /></button>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 4rem 0;
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+
+      width: 600px;
+      border-radius: 0.5rem;
+    }
+
+    .image-container {
+      display: flex;
+      border-radius: 0.5rem;
+      cursor: pointer;
+
+      transform: translateX(0);
+      transition: transform 0.5s ease-in-out;
+    }
+
+    img {
+      width: 600px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
+
+    .buttons-container {
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        position: absolute;
+        top: 50%;
+
+        padding: 0.5rem;
+        width: 4rem;
+
+        border: none;
+        color: black;
+        background-color: white;
+        opacity: 0.4;
+        z-index: 20;
+
+        cursor: pointer;
+
+        &#left {
+          left: 0;
+        }
+
+        &#right {
+          right: 0;
+        }
+
+        &:hover {
+          opacity: 0.9;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+</style>
+
+<script>
+  const images = document.getElementById("images");
+  const leftBtn = document.getElementById("left");
+  const rightBtn = document.getElementById("right");
+
+  const image = document.querySelectorAll("#images img");
+
+  let idx = 0;
+
+  let interval = setInterval(run, 3000);
+
+  function run() {
+    idx++;
+
+    changeImage();
+  }
+
+  function changeImage() {
+    if (idx > image.length - 1) {
+      idx = 0;
+    } else if (idx < 0) {
+      idx = image.length - 1;
+    }
+
+    images.style.transform = `translateX(${-idx * 600}px)`;
+  }
+
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(run, 2000);
+  }
+
+  rightBtn.addEventListener("click", () => {
+    idx++;
+
+    changeImage();
+    resetInterval();
+  });
+
+  leftBtn.addEventListener("click", () => {
+    idx--;
+
+    changeImage();
+    resetInterval();
+  });
+</script>
