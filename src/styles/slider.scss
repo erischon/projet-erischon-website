@@ -14,8 +14,6 @@
   border-radius: 0.5rem;
   background-position: center;
   background-size: cover;
-
-  cursor: pointer;
 }
 
 .arrow {
@@ -25,11 +23,9 @@
   width: 2rem;
   height: 4rem;
   color: $clr-secondary;
-  // background-color: $clr-secondary;
 
   z-index: 1;
   cursor: pointer;
-  // opacity: 0.2;
 }
 
 .arrow:hover {
@@ -54,12 +50,12 @@
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   background-color: $clr-secondary;
-  opacity: 0.85;
+  // opacity: 0.85;
 
   text-align: center;
 
   &:hover {
-    opacity: 1;
+    opacity: 0.9;
   }
 }
 
