@@ -6,9 +6,7 @@ description: "Passage à une stack Javascript d'une application de location d'ap
 liveUrl: "https://kasa-erischon.netlify.app/"
 codeUrl: "https://github.com/erischon/kasa-frontend"
 role: 'Développeur React'
-image:
-    url: 'kasa-cover' 
-    alt: 'Kasa'
+image: 'kasa-cover' 
 tags: ["React.js", "React-Router"]
 ---
 

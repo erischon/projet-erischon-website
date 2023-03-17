@@ -6,9 +6,7 @@ description: "Site web qui permet à des photographes indépendants de présente
 liveUrl: "https://erischon.github.io/Fisheye-frontend/index.html"
 codeUrl: "https://github.com/erischon/Fisheye-frontend"
 role: 'Développeur Front-end Javascript'
-image:
-    url: "fisheye-cover" 
-    alt: 'Fisheye'
+image: "fisheye-cover"
 tags: ["HTML", "SaSS", "Javascript"]
 ---
 

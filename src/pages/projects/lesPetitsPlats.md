@@ -6,9 +6,7 @@ description: "Moteur de recherche de recettes de cuisine."
 liveUrl: "https://erischon-les-petits-plats.netlify.app/"
 codeUrl: "https://github.com/erischon/erischon-les-petits-plats"
 role: 'Développeur Front-end Javascript'
-image:
-    url: 'les-petits-plats-cover' 
-    alt: 'Les Petits Plats'
+image: 'les-petits-plats-cover'
 tags: ["HTML", "SaSS", "Javascript"]
 ---
 

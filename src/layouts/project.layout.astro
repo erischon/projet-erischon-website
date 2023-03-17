@@ -8,9 +8,7 @@ import iconLink from "../assets/icons/iconLink.png";
 
 const { frontmatter } = Astro.props;
 
-const coverImage = await import(
-  `../assets/projects/${frontmatter.image.url}.webp`
-);
+const coverImage = await import(`../assets/projects/${frontmatter.image}.webp`);
 ---
 
 <Layout title={`Projet - ${frontmatter.title}`}>
