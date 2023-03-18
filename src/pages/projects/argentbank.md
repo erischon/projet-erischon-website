@@ -3,6 +3,7 @@ layout: "../../layouts/project.layout.astro"
 title: 'Argent Bank'
 lastUpdated: "2023-02-08"
 description: "Système d'authentification pour une application bancaire."
+type: "App Web"
 liveUrl: "https://github.com/erischon/argentbank-frontend"
 codeUrl: "https://github.com/erischon/argentbank-frontend"
 role: 'Développeur React'

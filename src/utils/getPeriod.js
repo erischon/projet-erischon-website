@@ -1,11 +1,8 @@
-import { getMonth } from "./getMonth";
+import { getMonthYear } from "./getMonthYear";
 
 export const getPeriod = (start, end) => {
-  const startMonth = `${getMonth(start.getMonth())} ${start.getFullYear()}`;
-
-  const endMonth = end
-    ? `${getMonth(end.getMonth())} ${end.getFullYear()}`
-    : "Aujourd'hui";
+  const startMonth = `${getMonthYear(start)}`;
+  const endMonth = end ? `${getMonthYear(end)}` : "Aujourd'hui";
 
   return `${startMonth} - ${endMonth} `;
 };

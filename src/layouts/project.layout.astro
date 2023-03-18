@@ -6,6 +6,8 @@ import Layout from "./Layout.astro";
 import iconGit from "../assets/icons/iconGit.png";
 import iconLink from "../assets/icons/iconLink.png";
 
+import { getMonthYear } from "../utils/getMonthYear";
+
 const { frontmatter } = Astro.props;
 
 const coverImage = await import(`../assets/projects/${frontmatter.image}.webp`);
@@ -17,8 +19,13 @@ const coverImage = await import(`../assets/projects/${frontmatter.image}.webp`);
 
     <div class="description">
       <h1>{frontmatter.title}</h1>
-      <p>Rôle: {frontmatter.role}</p>
-      <p>Mis à jour le : {frontmatter.lastUpdated}</p>
+      {frontmatter.type ? <p>Type: {frontmatter.type}</p> : null}
+      {frontmatter.role ? <p>Rôle: {frontmatter.role}</p> : null}
+      {
+        frontmatter.lastUpdated ? (
+          <p>Mise à jour : {getMonthYear(frontmatter.lastUpdated)}</p>
+        ) : null
+      }
     </div>
 
     <div class="links">
