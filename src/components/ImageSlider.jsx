@@ -8,9 +8,11 @@ import "../styles/slider.scss";
 function ImageSlider({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const { title, image, caseStudyUrl } = slides[currentIndex].frontmatter;
+
   const styles = {
     slide: {
-      backgroundImage: `url(/images/projects/${slides[currentIndex].image}.webp)`,
+      backgroundImage: `url(/images/projects/${image}.webp)`,
     },
   };
 
@@ -35,10 +37,10 @@ function ImageSlider({ slides }) {
       <img src={chevronRight.src} className="arrow right" onClick={next} />
       <img src={chevronLeft.src} className="arrow left" onClick={previous} />
 
-      <a href={slides[currentIndex].caseStudyUrl}>
+      <a href={caseStudyUrl}>
         <div style={styles.slide} className="slide">
           <div className="slide__text">
-            <h2>{slides[currentIndex].title}</h2>
+            <h2>{title}</h2>
           </div>
         </div>
       </a>

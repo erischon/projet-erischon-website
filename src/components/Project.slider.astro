@@ -1,10 +1,15 @@
 ---
 import ImageSlider from "../components/ImageSlider";
-import slides from "../data/projects";
+
+const allProjects = await Astro.glob("../pages/projects/*");
 ---
 
-<section class="slider-container">
-  <ImageSlider client:load slides={slides} />
+<section class="projects">
+  <h2 class="title">Mes Projets</h2>
+
+  <div class="slider-container">
+    <ImageSlider client:load slides={allProjects} />
+  </div>
 </section>
 
 <style lang="scss">
