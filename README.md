@@ -18,6 +18,7 @@ A simple website for Freelance
 
 - [Astro JS](https://astro.build/)
 - Javascript
+- React.js
 - HTML
 - [Sass](https://sass-lang.com/)
 
