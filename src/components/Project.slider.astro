@@ -3,12 +3,19 @@ import ImageSlider from "../components/ImageSlider";
 
 const data = await Astro.glob("../pages/projects/*");
 
+// Filter out projects that are not featured
 const allProjects = data.filter(
   (project) => project.frontmatter.featured === "true"
 );
 
-console.log("data", data);
-console.log("allProjects", allProjects);
+// Sort projects by last updated date
+allProjects.sort((a, b) =>
+  a.frontmatter.lastUpdated > b.frontmatter.lastUpdated
+    ? -1
+    : b.frontmatter.lastUpdated > a.frontmatter.lastUpdated
+    ? 1
+    : 0
+);
 ---
 
 <section class="projects">
