@@ -1,7 +1,14 @@
 ---
 import ImageSlider from "../components/ImageSlider";
 
-const allProjects = await Astro.glob("../pages/projects/*");
+const data = await Astro.glob("../pages/projects/*");
+
+const allProjects = data.filter(
+  (project) => project.frontmatter.featured === "true"
+);
+
+console.log("data", data);
+console.log("allProjects", allProjects);
 ---
 
 <section class="projects">

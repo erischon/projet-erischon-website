@@ -8,6 +8,7 @@ liveUrl: "https://github.com/erischon/argentbank-frontend"
 codeUrl: "https://github.com/erischon/argentbank-frontend"
 caseStudyUrl: "/projects/argentbank"
 role: 'Développeur React'
+featured: "true"
 image: 'argentbank-cover'
 tags: ["React.js", "Redux-Toolkit", "React-Router"]
 ---
