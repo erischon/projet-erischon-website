@@ -2,6 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 
 const allProjects = await Astro.glob("../pages/projects/*");
+
+// Sort projects by last updated date
+allProjects.sort((a, b) =>
+  a.frontmatter.lastUpdated > b.frontmatter.lastUpdated
+    ? -1
+    : b.frontmatter.lastUpdated > a.frontmatter.lastUpdated
+    ? 1
+    : 0
+);
+
 const icon = await import("../assets/icons/project.svg");
 ---
 
@@ -9,23 +19,41 @@ const icon = await import("../assets/icons/project.svg");
   <section class="">
     <h2 class="title">Les projets</h2>
 
-    {
-      allProjects.map((project) => (
-        <article>
-          <div>
-            <img src={`/images/icons/project.svg`} alt="" />
-            <a href={project.url}>{project.frontmatter.title}</a>
-          </div>
-          <span>{project.frontmatter.description}</span>
-        </article>
-      ))
-    }
+    <div class="projects-grid">
+      {
+        allProjects.map((project) => (
+          <article
+            style={{
+              backgroundImage: `url(/images/projects/${project.frontmatter.image}.webp)`,
+            }}
+          >
+            <div>
+              <a href={project.url}>{project.frontmatter.title}</a>
+            </div>
+            <span>{project.frontmatter.description}</span>
+          </article>
+        ))
+      }
+    </div>
   </section>
 </Layout>
 
 <style lang="scss">
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+  }
+
   article {
     margin: 2rem 0;
+
+    width: 300px;
+    height: 150px;
+
+    border-radius: 0.5rem;
+    background-position: center;
+    background-size: cover;
 
     div {
       display: flex;
