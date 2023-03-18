@@ -1,3 +1,12 @@
+
+## 0.1.0-a.2
+
+- Project.slider
+    - Ajout de la possibilité de n’afficher qu’un partie des projets
+    - Ajout d’un trie des projects
+- New Feature
+    - ajout d’une page listant tous les projets
+
 ## 0.1.0-a.1 : version initiale
 
 ### Features
