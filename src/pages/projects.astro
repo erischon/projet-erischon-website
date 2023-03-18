@@ -22,16 +22,18 @@ const icon = await import("../assets/icons/project.svg");
     <div class="projects-grid">
       {
         allProjects.map((project) => (
-          <article
-            style={{
-              backgroundImage: `url(/images/projects/${project.frontmatter.image}.webp)`,
-            }}
-          >
-            <div>
-              <a href={project.url}>{project.frontmatter.title}</a>
-            </div>
-            <span>{project.frontmatter.description}</span>
-          </article>
+          <a href={project.url}>
+            <article class="card-container">
+              <div
+                class="card"
+                style={{
+                  backgroundImage: `url(/images/projects/${project.frontmatter.image}.webp)`,
+                }}
+              >
+                <h2>{project.frontmatter.title}</h2>
+              </div>
+            </article>
+          </a>
         ))
       }
     </div>
@@ -39,43 +41,53 @@ const icon = await import("../assets/icons/project.svg");
 </Layout>
 
 <style lang="scss">
+  @import "../styles/variables.scss";
+
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 1rem;
+
+    margin: 4rem 0;
   }
 
-  article {
-    margin: 2rem 0;
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    width: 300px;
+    // max-width: 300px;
+    width: 100%;
     height: 150px;
 
-    border-radius: 0.5rem;
-    background-position: center;
-    background-size: cover;
+    cursor: pointer;
 
-    div {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-    }
+    .card {
+      position: relative;
 
-    img {
-      margin-right: 0.5rem;
+      width: 100%;
+      height: 100%;
 
-      width: 1.75rem;
-      height: 1.75rem;
-    }
+      border-radius: 0.5rem;
+      background-position: center;
+      background-size: cover;
 
-    a {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--color-primary);
-    }
+      h2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
 
-    span {
-      font-size: 0.9rem;
+        width: 60%;
+        // padding-left: 3rem;
+        padding-right: 0.5rem;
+
+        font-size: 1.5rem;
+        text-align: right;
+        color: $clr-background;
+        background-color: $clr-secondary;
+        opacity: 0.9;
+        border-bottom-right-radius: 0.5rem;
+      }
     }
   }
 </style>

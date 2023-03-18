@@ -1,6 +1,8 @@
 ---
 import ImageSlider from "../components/ImageSlider";
 
+import { Icon } from "astro-icon";
+
 const data = await Astro.glob("../pages/projects/*");
 
 // Filter out projects that are not featured
@@ -24,21 +26,54 @@ allProjects.sort((a, b) =>
   <div class="slider-container">
     <ImageSlider client:load slides={allProjects} />
   </div>
+
+  <a href="/projects" class="projects-footer">
+    <span>Tous les projects</span>
+    <Icon name="ic:round-chevron-right" />
+  </a>
 </section>
 
 <style lang="scss">
-  .slider-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  @import "../styles/variables.scss";
 
-    margin: 4rem auto;
-    max-width: 400px;
-    height: 200px;
+  .projects {
+    .slider-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    @media screen and (min-width: 640px) {
-      max-width: 600px;
-      height: 300px;
+      margin: 4rem auto;
+      max-width: 400px;
+      height: 200px;
+
+      @media screen and (min-width: 640px) {
+        max-width: 600px;
+        height: 300px;
+      }
+    }
+
+    .projects-footer {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+
+      span {
+        color: $clr-secondary;
+        text-decoration: none;
+        text-align: right;
+        font-weight: 600;
+      }
+
+      svg {
+        width: 2rem;
+        height: 2rem;
+
+        color: $clr-secondary;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 </style>
