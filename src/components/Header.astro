@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon";
+
 import logo from "../assets/favicon-32x32.png";
 ---
 
@@ -18,9 +20,38 @@ import logo from "../assets/favicon-32x32.png";
       </ul>
     </nav>
   </div>
+
+  <div class="social__container">
+    <a
+      href="https://twitter.com/erischon"
+      class="home__social--link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Icon name="mdi:twitter" />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/ericschonhofen/"
+      class="home__social--link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Icon name="mdi:linkedin" />
+    </a>
+    <a
+      href="https://github.com/erischon"
+      class="home__social--link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Icon name="mdi:github" />
+    </a>
+  </div>
 </header>
 
 <style lang="scss">
+  @import "../styles/variables.scss";
+
   header {
     margin: 1rem 1rem;
 
@@ -61,6 +92,49 @@ import logo from "../assets/favicon-32x32.png";
               text-transform: uppercase;
             }
           }
+        }
+      }
+    }
+  }
+
+  .social__container {
+    display: none;
+
+    @media screen and (min-width: 868px) {
+      display: flex;
+      gap: 0.5rem;
+
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      right: 0;
+      bottom: 14rem;
+      transform: rotate(90deg) translate(1rem, 4rem);
+
+      &:after {
+        position: absolute;
+        bottom: 45%;
+        left: 100%;
+        margin-left: 0.5rem;
+        margin-right: 4rem;
+        content: "";
+        width: 8rem;
+        height: 0.1rem;
+        background-color: $clr-background-light;
+      }
+
+      a {
+        color: $clr-text-light;
+        transform: rotate(-90deg);
+        margin-right: 0.5rem;
+
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+
+        &:hover {
+          color: $clr-secondary;
         }
       }
     }
