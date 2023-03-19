@@ -40,7 +40,9 @@ import { Icon } from "astro-icon";
 
   footer {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1rem;
 
     padding: 2rem 0;
     margin: 4rem 1rem 0 1rem;
@@ -48,6 +50,10 @@ import { Icon } from "astro-icon";
     font-size: small;
     text-align: right;
     color: $clr-text-light;
+
+    p {
+      font-size: smaller;
+    }
 
     .social-container {
       a {
@@ -63,6 +69,15 @@ import { Icon } from "astro-icon";
         &:hover {
           color: $clr-secondary;
         }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+
+      p {
+        font-size: small;
       }
     }
   }
