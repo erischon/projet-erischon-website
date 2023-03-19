@@ -14,7 +14,7 @@
 - Ajout d’une page listant tous les projets créés comme Page
 - Ajout de liens vers les réseaux sociaux
 
-## <span style="color: orange">0.1.0-a.1 : version initiale</span>
+## 0.1.0-a.1 : version initiale
 
 ### Features
 
