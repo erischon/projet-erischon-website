@@ -1,18 +1,25 @@
-
 ## 0.1.0-a.2
 
-- Project.slider
-    - Ajout de la possibilité de n’afficher qu’un partie des projets
-    - Ajout d’un trie des projects
-- New Feature
-    - ajout d’une page listant tous les projets
+### Modification Slider
+
+- Ajout de la possibilité de n’afficher qu’un partie des projets
+- Ajout d’un tri des projects
+
+### Modification Header
+
+- Création d’un menu responsive
+
+### New Features
+
+- Ajout d’une page listant tous les projets créés comme Page
+- Ajout de liens vers les réseaux sociaux
 
 ## 0.1.0-a.1 : version initiale
 
 ### Features
 
 - Une page d’Accueil
-- Une page About avec
+- Une page About avec :
     - une gestion des périodes d’expérience professionnelle
     - une gestion des compétences professionnelles
 - Un layout pour des pages de description de projet
