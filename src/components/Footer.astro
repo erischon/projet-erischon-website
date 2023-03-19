@@ -1,17 +1,69 @@
 ---
+import { Icon } from "astro-icon";
 ---
 
-<footer>© 2020-2023 Eri Schön All rights reserved</footer>
+<footer>
+  <p>© 2020-2023 Eri Schön All rights reserved</p>
+
+  <div class="social-container">
+    <a
+      href="https://twitter.com/erischon"
+      class="home__social--link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Icon name="mdi:twitter" />
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/ericschonhofen/"
+      class="home__social--link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Icon name="mdi:linkedin" />
+    </a>
+
+    <a
+      href="https://github.com/erischon"
+      class="home__social--link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Icon name="mdi:github" />
+    </a>
+  </div>
+</footer>
 
 <style lang="scss">
   @import "../styles/variables.scss";
 
   footer {
+    display: flex;
+    justify-content: space-between;
+
     padding: 2rem 0;
     margin: 4rem 1rem 0 1rem;
 
     font-size: small;
     text-align: right;
     color: $clr-text-light;
+
+    .social-container {
+      a {
+        color: $clr-text-light;
+        transform: rotate(-90deg);
+        margin-right: 0.5rem;
+
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+
+        &:hover {
+          color: $clr-secondary;
+        }
+      }
+    }
   }
 </style>
