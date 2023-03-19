@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon";
 
 import logo from "../assets/favicon-32x32.png";
+import NavbarMenu from "./NavbarMenu";
 ---
 
 <header class="">
@@ -13,12 +14,7 @@ import logo from "../assets/favicon-32x32.png";
       </a>
     </div>
 
-    <nav>
-      <ul class="">
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projets</a></li>
-      </ul>
-    </nav>
+    <NavbarMenu client:load />
   </div>
 
   <div class="social__container">
