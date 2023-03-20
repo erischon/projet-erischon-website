@@ -8,7 +8,7 @@ codeUrl: "https://github.com/erischon/erischon-portfolio"
 caseStudyUrl: "/projects/portfolio-1"
 role: "Développeur Frontend"
 featured: "false"
-lastUpdated: "2022-03-05"
+lastUpdated: "2022-05-30"
 image: "portfolio-1-cover"
 tags: ["HTML", "CSS", "Gatsby"]
 ---

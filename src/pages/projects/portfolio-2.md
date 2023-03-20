@@ -8,7 +8,7 @@ codeUrl: "https://github.com/erischon/my-portfolio-v2"
 caseStudyUrl: "/projects/portfolio-2"
 role: "Développeur Frontend"
 featured: "false"
-lastUpdated: "2022-06-04"
+lastUpdated: "2022-08-07"
 image: "portfolio-2-cover"
 tags: ["HTML", "SaSS", "Typescript", "React.js", "Next.js", "Sanity"]
 ---
