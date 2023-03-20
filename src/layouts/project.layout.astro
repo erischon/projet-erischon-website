@@ -37,6 +37,10 @@ const coverImage = await import(`../assets/projects/${frontmatter.image}.webp`);
       </a>
     </div>
 
+    <div class="about">
+      <p>{frontmatter.description}</p>
+    </div>
+
     <div class="tags">
       {
         frontmatter.tags.map((tag: string) => {
@@ -81,6 +85,7 @@ const coverImage = await import(`../assets/projects/${frontmatter.image}.webp`);
         grid-template-areas:
           "description cover-image cover-image"
           "links cover-image cover-image"
+          "about about about"
           "tags tags tags";
         gap: 1rem;
       }
@@ -156,6 +161,15 @@ const coverImage = await import(`../assets/projects/${frontmatter.image}.webp`);
           background-color: $clr-background-light;
           font-size: 0.75rem;
         }
+      }
+
+      .about {
+        grid-area: about;
+
+        margin: 1rem 0;
+        padding: 1rem;
+
+        border-left: 0.3rem solid $clr-text;
       }
     }
   </style>

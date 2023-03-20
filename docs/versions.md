@@ -2,17 +2,21 @@
 
 ### Modification Slider
 
-- Ajout de la possibilité de n’afficher qu’un partie des projets
-- Ajout d’un tri des projects
+- Ajout de la possibilité de n’afficher qu’un partie des projets.
+- Ajout d’un tri des projects.
 
 ### Modification Header
 
-- Création d’un menu responsive
+- Création d’un menu responsive.
+
+### Modification Project Layout
+
+- Ajout d’une description dynamique pour le projet.
 
 ### New Features
 
-- Ajout d’une page listant tous les projets créés comme Page
-- Ajout de liens vers les réseaux sociaux
+- Ajout d’une page listant tous les projets créés comme Page.
+- Ajout de liens vers les réseaux sociaux.
 
 ## 0.1.0-a.1 : version initiale
 

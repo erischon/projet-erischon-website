@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/project.layout.astro"
 title: "GameOn"
-description: "Landing Page avec un formulaire de réservation pour des événements gaming."
+description: "Création d'une landing Page avec un formulaire de réservation pour des événements gaming."
 type: "Landing Page"
 liveUrl: "https://erischon.github.io/GameOn-website-FR/starterOnly/"
 codeUrl: "https://github.com/erischon/GameOn-website-FR"

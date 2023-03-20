@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/project.layout.astro"
 title: "Portfolio v2"
-description: "Site Web Portfolio pour développeur, administrable simplement."
+description: "Création d'un site Web Portfolio pour développeur, administrable simplement."
 type: "Site Web"
 liveUrl: "https://erischon-portfolio-2.vercel.app/"
 codeUrl: "https://github.com/erischon/my-portfolio-v2"

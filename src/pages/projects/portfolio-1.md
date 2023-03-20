@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/project.layout.astro"
 title: "Portfolio v1"
-description: "Site Web Portfolio pour développeur, administrable simplement."
+description: "Création d'une site Web Portfolio pour développeur, administrable simplement."
 type: "Site Web"
 liveUrl: "https://erischon-portfolio.netlify.app/"
 codeUrl: "https://github.com/erischon/erischon-portfolio"

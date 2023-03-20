@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/project.layout.astro"
 title: "Eri Schön"
-description: "Site web pour Freelance."
+description: "Création d'un site web pour Développeur Freelance."
 type: "Site Web"
 liveUrl: "https://website.erischon.dev/"
 codeUrl: "https://github.com/erischon/projet-erischon-website"

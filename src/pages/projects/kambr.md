@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/project.layout.astro"
 title: "Kambr"
-description: "Un site web pour les propriétaires de Gîtes ou de Chambres d'hôtes. Un outil qui leur permet de créer un lien avec leurs clients et de les fidéliser."
+description: "Création d'un site web pour les propriétaires de Gîtes ou de Chambres d'hôtes. Un outil qui leur permet de créer un lien avec leurs clients et de les fidéliser."
 type: "Site Web"
 liveUrl: "https://kambr.vercel.app/"
 codeUrl: "https://github.com/erischon/kambr"

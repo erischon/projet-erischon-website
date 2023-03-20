@@ -2,7 +2,7 @@
 layout: "../../layouts/project.layout.astro"
 title: 'Les Petits Plats'
 lastUpdated: "2023-03-15"
-description: "Moteur de recherche de recettes de cuisine."
+description: "Création d'un moteur de recherche de recettes de cuisine en pure Javascript."
 type: "App Web"
 liveUrl: "https://erischon-les-petits-plats.netlify.app/"
 codeUrl: "https://github.com/erischon/erischon-les-petits-plats"

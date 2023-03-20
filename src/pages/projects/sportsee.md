@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/project.layout.astro"
 title: "SportSee"
-description: "Dashboard pour une application de coaching sportif."
+description: "Création d'un Dashboard pour une application de coaching sportif."
 type: "Application Web"
 liveUrl: "https://erischon-sportsee.netlify.app/"
 codeUrl: "https://github.com/erischon/sportsee-frontend"
