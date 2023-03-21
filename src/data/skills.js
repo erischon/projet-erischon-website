@@ -53,26 +53,26 @@ const skills = [
         link: "https://nextjs.org/",
         icon: "nextjs",
       },
-      {
-        name: "tRPC",
-        link: "https://trpc.io/",
-        icon: "trpc",
-      },
+      // {
+      //   name: "tRPC",
+      //   link: "https://trpc.io/",
+      //   icon: "trpc",
+      // },
       // {
       //   name: "GraphQL",
       //   link: "https://graphql.org/",
       //   icon: "graphql",
       // },
-      {
-        name: "Prisma",
-        link: "https://www.prisma.io/",
-        icon: "prisma",
-      },
-      {
-        name: "postgreSQL",
-        link: "https://www.postgresql.org/",
-        icon: "postgresql",
-      },
+      // {
+      //   name: "Prisma",
+      //   link: "https://www.prisma.io/",
+      //   icon: "prisma",
+      // },
+      // {
+      //   name: "postgreSQL",
+      //   link: "https://www.postgresql.org/",
+      //   icon: "postgresql",
+      // },
       // {
       //   name: "Node.js",
       //   link: "https://nodejs.org/en/",
