@@ -53,16 +53,16 @@ const skills = [
         link: "https://nextjs.org/",
         icon: "nextjs",
       },
-      // {
-      //   name: "tRPC",
-      //   link: "https://trpc.io/",
-      //   icon: "trpc",
-      // },
-      // {
-      //   name: "GraphQL",
-      //   link: "https://graphql.org/",
-      //   icon: "graphql",
-      // },
+      {
+        name: "tRPC",
+        link: "https://trpc.io/",
+        icon: "trpc",
+      },
+      {
+        name: "GraphQL",
+        link: "https://graphql.org/",
+        icon: "graphql",
+      },
       // {
       //   name: "Prisma",
       //   link: "https://www.prisma.io/",
@@ -88,11 +88,11 @@ const skills = [
       //   link: "https://nestjs.com/",
       //   icon: "nestjs",
       // },
-      {
-        name: "MongoDB",
-        link: "https://www.mongodb.com/",
-        icon: "mongodb",
-      },
+      // {
+      //   name: "MongoDB",
+      //   link: "https://www.mongodb.com/",
+      //   icon: "mongodb",
+      // },
     ],
     other: [
       {
