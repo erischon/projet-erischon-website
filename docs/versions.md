@@ -17,6 +17,7 @@
 
 - Ajout d’une page listant tous les projets créés comme Page.
 - Ajout de liens vers les réseaux sociaux.
+- Ajout de d’un Tooltip sur les Technos.
 
 ## 0.1.0-a.1 : version initiale
 

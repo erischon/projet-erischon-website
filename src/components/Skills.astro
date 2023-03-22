@@ -18,6 +18,10 @@ const { webApp, fullstack, other } = skills[0];
           return (
             <a href={skill.link} target="_blank">
               <img src={`/images/logos/${skill.icon}.svg`} alt={skill.name} />
+              <div class="tooltip">
+                <span class="skill-title">{skill.name}</span>
+                <span class="type">{skill.type}</span>
+              </div>
             </a>
           );
         })
@@ -51,6 +55,10 @@ const { webApp, fullstack, other } = skills[0];
           return (
             <a href={skill.link} target="_blank">
               <img src={`/images/logos/${skill.icon}.svg`} alt={skill.name} />
+              <div class="tooltip">
+                <span class="skill-title">{skill.name}</span>
+                <span class="type">{skill.type}</span>
+              </div>
             </a>
           );
         })
@@ -92,6 +100,51 @@ const { webApp, fullstack, other } = skills[0];
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+
+      a {
+        position: relative;
+
+        .tooltip {
+          display: none;
+          // display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          border-radius: 0.5rem;
+          position: absolute;
+          top: -3rem;
+          right: -6rem;
+
+          padding: 0.7rem;
+
+          background-color: $clr-background;
+
+          z-index: 1;
+
+          .skill-title {
+            width: 100px;
+            margin-bottom: 0.5rem;
+
+            color: $clr-text;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-align: center;
+          }
+
+          .type {
+            font-size: 0.65rem;
+            color: $clr-text-light;
+
+            text-align: center;
+          }
+        }
+      }
+
+      a:hover {
+        .tooltip {
+          display: flex;
+        }
+      }
     }
 
     @media screen and (min-width: 640px) {
