@@ -27,10 +27,11 @@ const skills = [
         icon: "js",
       },
       {
-        name: "React",
-        link: "https://reactjs.org/",
-        icon: "react",
+        name: "TypeScript",
+        link: "https://www.typescriptlang.org/",
+        icon: "typescript",
       },
+
       // {
       //   name: "redux",
       //   link: "https://redux.js.org/",
@@ -41,6 +42,26 @@ const skills = [
         link: "https://astro.build/",
         icon: "astro",
       },
+      {
+        name: "React",
+        link: "https://reactjs.org/",
+        icon: "react",
+      },
+      {
+        name: "Next.js",
+        link: "https://nextjs.org/",
+        icon: "nextjs",
+      },
+      // {
+      //   name: "tRPC",
+      //   link: "https://trpc.io/",
+      //   icon: "trpc",
+      // },
+      // {
+      //   name: "GraphQL",
+      //   link: "https://graphql.org/",
+      //   icon: "graphql",
+      // },
     ],
     fullstack: [
       {
