@@ -31,12 +31,6 @@ const skills = [
         icon: "js",
         type: "Language",
       },
-      {
-        name: "TypeScript",
-        link: "https://www.typescriptlang.org/",
-        icon: "typescript",
-        type: "Type Checker",
-      },
 
       // {
       //   name: "redux",
@@ -55,22 +49,6 @@ const skills = [
         icon: "react",
         type: "JS Framework",
       },
-      {
-        name: "Next.js",
-        link: "https://nextjs.org/",
-        icon: "nextjs",
-        type: "JS Framework",
-      },
-      // {
-      //   name: "tRPC",
-      //   link: "https://trpc.io/",
-      //   icon: "trpc",
-      // },
-      // {
-      //   name: "GraphQL",
-      //   link: "https://graphql.org/",
-      //   icon: "graphql",
-      // },
     ],
     fullstack: [
       {
@@ -84,25 +62,30 @@ const skills = [
         icon: "nextjs",
       },
       {
-        name: "tRPC",
-        link: "https://trpc.io/",
-        icon: "trpc",
+        name: "Prisma",
+        link: "https://www.prisma.io/",
+        icon: "prisma",
       },
+      // {
+      //   name: "tRPC",
+      //   link: "https://trpc.io/",
+      //   icon: "trpc",
+      // },
       {
         name: "GraphQL",
         link: "https://graphql.org/",
         icon: "graphql",
       },
-      // {
-      //   name: "Prisma",
-      //   link: "https://www.prisma.io/",
-      //   icon: "prisma",
-      // },
-      // {
-      //   name: "postgreSQL",
-      //   link: "https://www.postgresql.org/",
-      //   icon: "postgresql",
-      // },
+      {
+        name: "MongoDB",
+        link: "https://www.mongodb.com/",
+        icon: "mongodb",
+      },
+      {
+        name: "postgreSQL",
+        link: "https://www.postgresql.org/",
+        icon: "postgresql",
+      },
       // {
       //   name: "Node.js",
       //   link: "https://nodejs.org/en/",
@@ -117,11 +100,6 @@ const skills = [
       //   name: "Nest.js",
       //   link: "https://nestjs.com/",
       //   icon: "nestjs",
-      // },
-      // {
-      //   name: "MongoDB",
-      //   link: "https://www.mongodb.com/",
-      //   icon: "mongodb",
       // },
     ],
     other: [
