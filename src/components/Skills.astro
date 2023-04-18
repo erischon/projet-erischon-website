@@ -40,6 +40,10 @@ const { webApp, fullstack, other } = skills[0];
           return (
             <a href={skill.link} target="_blank">
               <img src={`/images/logos/${skill.icon}.svg`} alt={skill.name} />
+              <div class="tooltip">
+                <span class="skill-title">{skill.name}</span>
+                <span class="type">{skill.type}</span>
+              </div>
             </a>
           );
         })

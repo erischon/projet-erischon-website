@@ -55,16 +55,19 @@ const skills = [
         name: "TypeScript",
         link: "https://www.typescriptlang.org/",
         icon: "typescript",
+        type: "Language",
       },
       {
         name: "Next.js",
         link: "https://nextjs.org/",
         icon: "nextjs",
+        type: "JS Framework",
       },
       {
         name: "Prisma",
         link: "https://www.prisma.io/",
         icon: "prisma",
+        type: "ORM",
       },
       // {
       //   name: "tRPC",
@@ -75,16 +78,19 @@ const skills = [
         name: "GraphQL",
         link: "https://graphql.org/",
         icon: "graphql",
+        type: "API",
       },
       {
         name: "MongoDB",
         link: "https://www.mongodb.com/",
         icon: "mongodb",
+        type: "Database",
       },
       {
         name: "postgreSQL",
         link: "https://www.postgresql.org/",
         icon: "postgresql",
+        type: "Database",
       },
       // {
       //   name: "Node.js",
@@ -137,6 +143,7 @@ const skills = [
         name: "Figma",
         link: "https://www.figma.com/",
         icon: "figma",
+        type: "Design",
       },
       {
         name: "Vercel",
